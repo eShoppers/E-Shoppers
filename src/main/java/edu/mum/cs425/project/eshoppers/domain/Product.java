@@ -25,6 +25,10 @@ public class Product {
     @NotEmpty(message = "*Please provide product description")
     private String description;
 
+    @Lob
+    @Column(name="product_pic")
+    private byte[] productPic;
+
 
     public Long getId() {
         return id;
@@ -64,6 +68,14 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public byte[] getProductPic() {
+        return productPic;
+    }
+
+    public void setProductPic(byte[] productPic) {
+        this.productPic = productPic;
     }
 
     @Override

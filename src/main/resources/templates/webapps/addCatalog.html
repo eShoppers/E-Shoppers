@@ -13,7 +13,7 @@
 <div>
     <header th:replace="webapps/index :: navHeader"></header>
 </div>
-<form class="form-horizontal" action="/catalog" method="post">
+<form class="form-horizontal" action="/catalog" method="post" th:object="${catalog}>
     <fieldset>
         <!--&lt;!&ndash; Form Name &ndash;&gt;-->
         <!--<legend align="center">Add Product</legend>-->

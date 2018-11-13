@@ -2,96 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bbb38ff-3e6e-44e6-8fcc-ab3b0f7967d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/webapps/addCatalog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/webapps/addProduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/CatalogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/shoppingcart.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/CatalogController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/LoginController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/shoppingcart.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/CatalogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/CatalogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/ProductServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/ProductServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/webapps/addCatalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/webapps/addCatalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/webapps/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/webapps/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/edu.mum.cs425.project.eshoppers/eshoppers/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/edu.mum.cs425.project.eshoppers/eshoppers/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/EshoppersApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/EshoppersApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/webapps/indexs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/webapps/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/webapps/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/HomeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/SignUpController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/Cart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/Catalog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/Catalog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/AdminRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/AdminRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/CartRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/CartRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/CatalogRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/CatalogRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/CustomerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/OrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/OrderRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/CartService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/CatalogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/CatalogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/AdminServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/CartServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/OrderServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/OrderServiceImplementation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/ProductServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/ProductServiceImplementation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/heroic-features.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/heroic-features.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/signUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/signUp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/Lenovo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/Lenovo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/e-shopper.gif" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/e-shopper.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/e-shoppers-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/e-shoppers-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/e-shopping-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/e-shopping-cart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/eshopper-Header.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/eshopper-Header.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/gpxl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/gpxl.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/lg.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/lg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/mob1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/mob1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/moto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/moto.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/online-shopping.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/online-shopping.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/samsung.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/samsung.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/shoppers-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/shoppers-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.min.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.slim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.slim.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.slim.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.slim.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.slim.min.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/webapps/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/webapps/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/webapps/homelayout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/webapps/homelayout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/webapps/addCatalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/webapps/addCatalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/webapps/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/webapps/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/webapps/indexs.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/webapps/indexs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/webapps/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/webapps/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/webapps/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/webapps/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/mum/cs425/project/eshoppers/EshoppersApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/mum/cs425/project/eshoppers/EshoppersApplicationTests.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,32 +52,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="7" />
-          <entry key="java" value="15" />
+          <entry key="html" value="11" />
+          <entry key="java" value="24" />
           <entry key="properties" value="2" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="7" />
-          <entry key="JAVA" value="15" />
+          <entry key="HTML" value="11" />
+          <entry key="JAVA" value="24" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="565" />
-          <entry key="java" value="276" />
+          <entry key="html" value="567" />
+          <entry key="java" value="391" />
           <entry key="properties" value="5" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="565" />
-          <entry key="JAVA" value="276" />
+          <entry key="HTML" value="567" />
+          <entry key="JAVA" value="391" />
           <entry key="Properties" value="5" />
           <entry key="XML" value="2" />
         </counts>
@@ -155,50 +91,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Product.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/CatalogController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+            <state relative-caret-position="186">
+              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
               <folding>
-                <element signature="e#1658#1659#0" expanded="true" />
-                <element signature="e#1691#1692#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Catalog.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/CatalogService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/addCatalog.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+            <state relative-caret-position="135">
+              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -206,48 +114,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/addProduct.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+            <state relative-caret-position="220">
+              <caret line="15" column="83" lean-forward="true" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="83" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/HomeController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="315">
+              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+              <folding>
+                <element signature="e#870#871#0" expanded="true" />
+                <element signature="e#897#898#0" expanded="true" />
+                <element signature="e#973#974#0" expanded="true" />
+                <element signature="e#1005#1006#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="68" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="165">
+              <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/ProductServiceImplementation.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
-              <folding>
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#1151#1152#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="140">
+              <caret line="10" column="61" lean-forward="true" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/addCatalog.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -290,7 +200,11 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/webapps/addProduct.html" />
         <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Cart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/CatalogService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/webapps/addCatalog.html" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/CatalogController.java" />
       </list>
     </option>
   </component>
@@ -308,8 +222,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="40" />
-    <option name="y" value="63" />
+    <option name="x" value="27" />
+    <option name="y" value="26" />
     <option name="width" value="1400" />
     <option name="height" value="797" />
   </component>
@@ -377,6 +291,24 @@
               <item name="E-Shoppers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="eshoppers" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eshoppers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="E-Shoppers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="eshoppers" type="462c0819:PsiDirectoryNode" />
+              <item name="serviceImpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eshoppers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="E-Shoppers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -403,7 +335,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542126480946" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542134706152" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
@@ -446,18 +378,18 @@
       <updated>1542081227382</updated>
       <workItem from="1542081228700" duration="9185000" />
       <workItem from="1542126585278" duration="740000" />
-      <workItem from="1542127365217" duration="2121000" />
+      <workItem from="1542127365217" duration="3885000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12046000" />
+    <option name="totallyTimeSpent" value="13810000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="63" width="1400" height="797" extended-state="0" />
+    <frame x="27" y="26" width="1400" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19440353" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19440353" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -468,13 +400,13 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49852726" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49852726" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.5716312" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5014728" side_tool="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4992636" weight="0.32907802" />
       <window_info anchor="bottom" id="Problems" order="11" />
@@ -507,13 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/homelayout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -538,30 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="61" selection-start-line="30" selection-start-column="3" selection-end-line="34" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
@@ -576,35 +477,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/addProduct.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/ProductServiceImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
-          <folding>
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -633,10 +509,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/ProductServiceImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+          <folding>
+            <element signature="e#1100#1101#0" expanded="true" />
+            <element signature="e#1151#1152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="61" lean-forward="true" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding>
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/CatalogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/addProduct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" column="83" lean-forward="true" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/addCatalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+        <state relative-caret-position="165">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/CatalogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
         </state>
       </provider>
     </entry>

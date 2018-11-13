@@ -1,0 +1,14 @@
+
+
+h2
+{
+    font-family: 'Black And White Picture', sans-serif;
+}
+div.Abosulate-Center
+{
+    margin: auto;
+    position: relative;
+    top: 20%; left: 25%; bottom: 0; right: 25%;
+  /* border-style: groove;
+    border-color: azure;*/
+}

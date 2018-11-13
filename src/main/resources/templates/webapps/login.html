@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/login.css}" />
+<title>E-SHOPPERS</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>E-SHOPPERS</title>
+</head>
+<body>
+<div>
+<header th:insert="webapps/index :: navHeader">	</header></div>
+ <div class="container">
+	<div class="row">
+		<div class="Absolute-Center is-Responsive">
+			<div id="logo-container"></div>
+			<div class="col-sm-12 col-md-10 col-md-offset-1">
+				<form action="" id="loginForm">
+					<div class="form-group input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input class="form-control" type="text" name='username' placeholder="username"/>
+					</div>
+					<div class="form-group input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+						<input class="form-control" type="password" name='password' placeholder="password"/>
+					</div>
+					<div class="form-group">
+						<button type="button" class="btn btn-def btn-block">Login</button>
+					</div>
+					<div class="form-group text-center">
+						<a href="/signup">Sign Up</a>
+						<a href="#">Forgot Password</a>&nbsp;|&nbsp;<a href="#">Support</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

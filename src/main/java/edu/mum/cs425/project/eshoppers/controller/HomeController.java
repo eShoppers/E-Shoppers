@@ -16,33 +16,33 @@ public class HomeController {
 		return "webapps/index";
 	}
 
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String login() {
-		return "webapps/login";
-	}
-
-	@RequestMapping(value = "/signup", method = RequestMethod.GET)
-	public String signup() {
-		return "webapps/signup";
-	}
-
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String signin(@ModelAttribute(name = "loginForm") User user, Model model) {
-		System.out.println("Userrrrrr" + user);
-		String username = user.getEmail();
-		String password = user.getPassword();
-
-		if ("admin".equals(username) && "admin".equals(password)) {
-			return "webapps/index";
-		}
-		model.addAttribute("invalidCredentials", true);
-		return "webapps/login";
-	}
-
-	@RequestMapping(value = "/signup", method = RequestMethod.POST)
-	public String signup(@ModelAttribute(name = "signup") User user, Model model) {
-		System.out.println("Userrrrrr" + user);
-		return "webapps/login";
-	}
-
+//	@RequestMapping(value = "/login", method = RequestMethod.GET)
+//	public String login() {
+//		return "webapps/login";
+//	}
+//
+//	@RequestMapping(value = "/signup", method = RequestMethod.GET)
+//	public String signup() {
+//		return "webapps/signup";
+//	}
+//
+//	@RequestMapping(value = "/login", method = RequestMethod.POST)
+//	public String signin(@ModelAttribute(name = "loginForm") User user, Model model) {
+//		System.out.println("Userrrrrr" + user);
+//		String username = user.getEmail();
+//		String password = user.getPassword();
+//
+//		if ("admin".equals(username) && "admin".equals(password)) {
+//			return "webapps/index";
+//		}
+//		model.addAttribute("invalidCredentials", true);
+//		return "webapps/login";
+//	}
+//
+//	@RequestMapping(value = "/signup", method = RequestMethod.POST)
+//	public String signup(@ModelAttribute(name = "signup") User user, Model model) {
+//		System.out.println("Userrrrrr" + user);
+//		return "webapps/login";
+//	}
+//
 }

@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class CatalogServiceImpl implements CatalogService {
+
 	@Autowired
 	CatalogRepository catalogRepository;
 	

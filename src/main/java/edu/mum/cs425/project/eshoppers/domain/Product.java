@@ -29,6 +29,17 @@ public class Product {
     @Column(name="product_pic")
     private byte[] productPic;
 
+    @ManyToOne
+    private Catalog catalog;
+
+
+    public Catalog getCatalog() {
+        return catalog;
+    }
+
+    public void setCatalog(Catalog catalog) {
+        this.catalog = catalog;
+    }
 
     public Long getId() {
         return id;

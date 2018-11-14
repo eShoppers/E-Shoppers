@@ -1,3 +1,21 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Index Page</title>
+</head>
+<body>
+<div style="text-align: center;"><h1 >Welcome</h1></div>
+<div style="text-align: center;"><img alt="eshopper image" src="../images/e-shopper.gif"></div>
+
+<div style="text-align: center;"><a th:href="@{/login}">Log In</a></div>
+<div style="text-align: center;"><img alt="eshopper image" src="../images/e-shoppers-1.jpg"></div>
+<div style="text-align: center;"><a th:href="@{/signup}">Sign Up</a></div>
+
+
+</body>
+</html> -->
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
@@ -12,8 +30,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-	<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
 
     <!-- Custom styles for this template -->
     <link href="../css/heroic-features.css" rel="stylesheet">
@@ -52,13 +68,7 @@
       </option>
 	</select>
 	</div> -->
-	<select>
-	<option selected>--All--</option>
-	<option>Mobile</option>
-		<option>Tablets</option>
-	</select>
-	<input type="text" class="search" id="search" size="35" placeholder="Please enter Key words">
-	<input type="button" id="search" value="Search">
+	<input type="text" class="search" id="search" placeholder="Please enter Key words" >
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
@@ -70,24 +80,21 @@
               <a class="nav-link" href="/product">redae</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Catalog">Catalogs</a>
+              <a class="nav-link" href="#">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contactus">Contacts</a>
+              <a class="nav-link" href="/catalog">Contact</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/login" data-target="#container" >Sign In</a>
             </li>
              <li class="nav-item">
-                <a href="/shoppingCart" data-target="#container" class="nav-link">
+                <a href="/shoppingcart" data-target="#container" class="nav-link">
                     <span id="shopping-cart"><img alt="shoppingcart" src="../images/shoppingcart.jpg" height="30" width="30">
                         <span>0</span><!-- ${numItems} from shopping cart-->
                     </span>
                 </a>
                  </li>
-                 <li class="nav-item">
-              <a class="nav-link" href="/profile">Hi <!-- ${username} --></a>
-            </li>
           </ul>
         </div>
       </div>
@@ -101,7 +108,7 @@
         <h1 class="display-3">Welcome To E-Shoppers!</h1>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
         <a href="#" class="btn btn-primary btn-lg">Call to action!</a> -->
-        <img class="card-img-top" src="../images/eshopper-Header.png" alt="homelogo" height="200">
+        <img class="card-img-top" src="../images/eshopper-Header.png" alt="">
         
       </header>
 

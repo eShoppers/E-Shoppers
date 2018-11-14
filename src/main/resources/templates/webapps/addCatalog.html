@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/heroic-features.css" rel="stylesheet">
+</head>
+
+<body>
+<div>
+    <header th:replace="webapps/index :: navHeader"></header>
+</div>
+<form class="form-horizontal" action="/catalog" method="post" th:object="${catalog}>
+    <fieldset>
+        <!--&lt;!&ndash; Form Name &ndash;&gt;-->
+        <!--<legend align="center">Add Product</legend>-->
+        <h1 align="center">Add Catalog</h1>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="catalog_name">CATALOG NAME</label>
+            <div class="col-md-4">
+                <input id="catalog_name" name="catalog_name" placeholder="Catalog Name" class="form-control input-md" required="" type="text">
+
+            </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="catalog_description">CATALOG DESCRIPTION</label>
+            <div class="col-md-4">
+                <textarea class="form-control" id="catalog_description" name="catalog_description"></textarea>
+            </div>
+        </div>
+
+        <!-- File Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="filebutton">CATALOG IMAGE</label>
+            <div class="col-md-4">
+                <input id="filebutton" name="filebutton" class="input-file" type="file">
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="savebutton"></label>
+            <div class="col-md-4">
+                <button type="submit" id="savebutton" name="savebutton" class="btn btn-primary">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="reset" id="cancelbutton" name="cancelbutton" class="btn btn-secondary">Clear</button>
+            </div>
+        </div>
+
+
+
+    </fieldset>
+</form>
+<div>
+    <footer th:replace="webapps/index :: footerCopyRight"></footer>
+</div>
+    <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+    <!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

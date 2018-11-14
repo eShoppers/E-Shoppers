@@ -33,6 +33,7 @@ public class Order {
     @Column(name = "price")
     @NotNull
     private Double price;
+
     @OneToOne
     @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,property="@id", scope = Product.class)
     private Product product;

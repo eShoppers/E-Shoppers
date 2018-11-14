@@ -5,9 +5,11 @@ import edu.mum.cs425.project.eshoppers.repository.ProductRepository;
 import edu.mum.cs425.project.eshoppers.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProductServiceImplementation implements ProductService {
 
     @Autowired

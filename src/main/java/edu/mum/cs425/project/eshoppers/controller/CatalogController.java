@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import edu.mum.cs425.project.eshoppers.domain.Catalog;
 import edu.mum.cs425.project.eshoppers.service.CatalogService;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class CatalogController {
@@ -21,13 +22,40 @@ public class CatalogController {
 	@Autowired
 	CatalogService catalogService;
 
+<<<<<<< HEAD
 	@RequestMapping(value = "/addcatalog")
 	public List<Catalog> catalog(@Valid @ModelAttribute("catalog") Catalog catalog,BindingResult result,Model model) {
 		if(result.hasErrors())
 			
 			return null;
 		return catalogService.findAll();
+=======
+//	@RequestMapping(value = "/addcatalog")
+//	public List<Catalog> catalog(@Valid @ModelAttribute("catalog") Catalog catalog,BindingResult result,Model model) {
+//		if(result.hasErrors())
+//			return null;
+//		return catalogService.findAll();
+//	}
 
+	@RequestMapping(value = "/catalog", method = RequestMethod.GET)
+	public String create(Model model){
+		model.addAttribute("catalog", new Catalog());
+		return "webapps/addCatalog";
+	}
+
+	@RequestMapping(value = "/catalog", method = RequestMethod.POST)
+	public String edit(@Valid @ModelAttribute("catalog") Catalog catalog,
+					   BindingResult result, Model model)  {
+
+		if (result.hasErrors()) {
+			model.addAttribute("errors", result.getAllErrors());
+			return "webapps/addCatalog";
+		}
+		catalog = catalogService.save(catalog);
+>>>>>>> b3f8eba3a60f0e0fa575f291986188661b8fc63f
+
+//        update with correct url
+		return "redirect:/catalogs";
 	}
 	
 	@GetMapping(value="/catalog")

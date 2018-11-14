@@ -26,4 +26,14 @@ public class CatalogServiceImpl implements CatalogService {
     public List<Catalog> findAll() {
         return catalogRepository.findAll();
     }
+
+    @Override
+    public Catalog save(Catalog catalog) {
+        return catalogRepository.save(catalog);
+    }
+
+    @Override
+    public void delete(Long id) {
+        catalogRepository.deleteById(id);
+    }
 }

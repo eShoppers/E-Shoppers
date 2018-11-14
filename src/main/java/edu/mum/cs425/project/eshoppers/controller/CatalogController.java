@@ -24,6 +24,7 @@ public class CatalogController {
 	@RequestMapping(value = "/addcatalog")
 	public List<Catalog> catalog(@Valid @ModelAttribute("catalog") Catalog catalog,BindingResult result,Model model) {
 		if(result.hasErrors())
+			
 			return null;
 		return catalogService.findAll();
 

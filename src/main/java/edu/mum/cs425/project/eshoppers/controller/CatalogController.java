@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -20,21 +21,20 @@ public class CatalogController {
 
 	@Autowired
 	CatalogService catalogService;
+	
+	@GetMapping(value="/Catalog")
+	public String cataloglist() {
+		
+		return "webapps/Catalog";
+	}
 
-//	@RequestMapping(value = "/addcatalog")
-//	public List<Catalog> catalog(@Valid @ModelAttribute("catalog") Catalog catalog,BindingResult result,Model model) {
-//		if(result.hasErrors())
-//			return null;
-//		return catalogService.findAll();
-//	}
-
-	@RequestMapping(value = "/catalog", method = RequestMethod.GET)
+	@RequestMapping(value = "/addcatalog", method = RequestMethod.GET)
 	public String create(Model model){
 		model.addAttribute("catalog", new Catalog());
 		return "webapps/addCatalog";
 	}
 
-	@RequestMapping(value = "/catalog", method = RequestMethod.POST)
+	@RequestMapping(value = "/addcatalog", method = RequestMethod.POST)
 	public String edit(@Valid @ModelAttribute("catalog") Catalog catalog,
 					   BindingResult result, Model model)  {
 
@@ -50,4 +50,6 @@ public class CatalogController {
 //        update with correct url
 		return "redirect:/";
 	}
+	
+	
 }

@@ -13,8 +13,8 @@
 <div>
     <header th:replace="webapps/index :: navHeader"></header>
 </div>
-<form class="form-horizontal" action="/catalog" method="post" th:object="${catalog}>
-    <fieldset>
+	<form action="/Catalog" method="post" th:object="${catalog}">
+   	<fieldset>
         <!--&lt;!&ndash; Form Name &ndash;&gt;-->
         <!--<legend align="center">Add Product</legend>-->
         <h1 align="center">Add Catalog</h1>
@@ -52,10 +52,7 @@
                 <button type="reset" id="cancelbutton" name="cancelbutton" class="btn btn-secondary">Clear</button>
             </div>
         </div>
-
-
-
-    </fieldset>
+        </fieldset>
 </form>
 <div>
     <footer th:replace="webapps/index :: footerCopyRight"></footer>

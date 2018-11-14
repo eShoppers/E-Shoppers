@@ -12,6 +12,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+	<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
 
     <!-- Custom styles for this template -->
     <link href="../css/heroic-features.css" rel="stylesheet">
@@ -54,8 +56,8 @@
 	<option>Mobile</option>
 		<option>Tablets</option>
 	</select>
-	<input type="text" class="search" id="search" size="35" placeholder="Please enter Key words" >&nbsp;
-	<input type="button" value="Search">
+	<input type="text" class="search" id="search" size="35" placeholder="Please enter Key words">
+	<input type="button" id="search" value="Search">
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
@@ -64,14 +66,10 @@
               </a>
             </li>
             <li class="nav-item">
-<<<<<<< HEAD
-              <a class="nav-link" href="#">Latest</a>
-=======
               <a class="nav-link" href="/product">redae</a>
->>>>>>> b3f8eba3a60f0e0fa575f291986188661b8fc63f
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/catalog">Catalogs</a>
+              <a class="nav-link" href="/Catalog">Catalogs</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contactus">Contacts</a>
@@ -80,14 +78,14 @@
               <a class="nav-link" href="/login" data-target="#container" >Sign In</a>
             </li>
              <li class="nav-item">
-                <a href="/shoppingcart" data-target="#container" class="nav-link">
+                <a href="/shoppingCart" data-target="#container" class="nav-link">
                     <span id="shopping-cart"><img alt="shoppingcart" src="../images/shoppingcart.jpg" height="30" width="30">
                         <span>0</span><!-- ${numItems} from shopping cart-->
                     </span>
                 </a>
                  </li>
                  <li class="nav-item">
-              <a class="nav-link" href="/catalog">Hi <!-- ${username} --></a>
+              <a class="nav-link" href="/profile">Hi <!-- ${username} --></a>
             </li>
           </ul>
         </div>

@@ -16,10 +16,7 @@ public class HomeController {
 	public String homepages() {
 		return "webapps/index";
 	}
-	@RequestMapping(value = "/contactus")
-	public String contactus() {
-		return "webapps/contactus";
-	}
+	
 	
 	
 	

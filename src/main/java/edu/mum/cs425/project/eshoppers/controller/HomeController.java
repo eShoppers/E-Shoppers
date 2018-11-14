@@ -2,6 +2,7 @@ package edu.mum.cs425.project.eshoppers.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,7 +16,15 @@ public class HomeController {
 	public String homepages() {
 		return "webapps/index";
 	}
-
+	@RequestMapping(value = "/contactus")
+	public String contactus() {
+		return "webapps/contactus";
+	}
+	
+	
+	
+	
+	
 //	@RequestMapping(value = "/login", method = RequestMethod.GET)
 //	public String login() {
 //		return "webapps/login";

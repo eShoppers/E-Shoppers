@@ -40,11 +40,14 @@ public class CatalogController {
 
 		if (result.hasErrors()) {
 			model.addAttribute("errors", result.getAllErrors());
+			System.out.println("error occured");
+			System.out.println(result.toString());
 			return "webapps/addCatalog";
 		}
 		catalog = catalogService.save(catalog);
-
+		System.out.println("successfull" + catalog);
+		System.out.println("successfull" + catalog);
 //        update with correct url
-		return "redirect:/catalogs";
+		return "redirect:/";
 	}
 }

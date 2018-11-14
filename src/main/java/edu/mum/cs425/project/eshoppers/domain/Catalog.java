@@ -18,12 +18,19 @@ public class Catalog {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
-    @NotEmpty(message="Please Provide catalogName")
+
+	@NotEmpty(message="Please Provide catalog ame")
 	private String catalogName;
 
-    @OneToMany//(mappedBy = "catalog", cascade = CascadeType.PERSIST)
-    @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,property="@id", scope = Product.class)
+	@NotEmpty(message="Please Provide catalog description")
+	private String catalogDescription;
+
+	@Lob
+	@Column(name="catalog_pic")
+	private byte[] catalogPic;
+
+    @OneToMany(mappedBy = "catalog", cascade = CascadeType.ALL)
+   // @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,property="@id", scope = Product.class)
 	private List<Product> products=new ArrayList<Product>();
 
 	public Long getId() {
@@ -48,6 +55,23 @@ public class Catalog {
 	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
+
+	public String getCatalogDescription() {
+		return catalogDescription;
+	}
+
+	public void setCatalogDescription(String catalogDescription) {
+		this.catalogDescription = catalogDescription;
+	}
+
+	public byte[] getCatalogPic() {
+		return catalogPic;
+	}
+
+	public void setCatalogPic(byte[] catalogPic) {
+		this.catalogPic = catalogPic;
+	}
+
 
 	@Override
 	public String toString() {

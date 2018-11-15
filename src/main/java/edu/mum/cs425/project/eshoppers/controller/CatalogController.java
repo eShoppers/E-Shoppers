@@ -20,17 +20,16 @@ public class CatalogController {
 
 	@Autowired
 	CatalogService catalogService;
-
+	
+	//@GetMapping(value="/Catalog")
 	@RequestMapping(value="/catalog", method = RequestMethod.GET)
 	public ModelAndView cataloglist() {
 		List<Catalog> catalog = catalogService.findAll();
-
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("catalogs", catalog);
 		modelAndView.setViewName("webapps/catalog");
 		return modelAndView;
 
-		//return "webapps/catalog";
 	}
 
 	@RequestMapping(value = "/addcatalog", method = RequestMethod.GET)
@@ -62,6 +61,21 @@ public class CatalogController {
 			System.out.println("successfull" + catalog);
 			System.out.println("successfull" + catalog);
 //        update with correct url
-			return "redirect:/catalog";
+			return "redirect:/";
+	}
+
+	@RequestMapping(value="/catalog/{id}", method = RequestMethod.GET)
+	public String view(@PathVariable Long id, Model model){
+		System.out.println("catalog id " + id);
+		Catalog cat = catalogService.findOne(id);
+		System.out.println(cat);
+		model.addAttribute("catalog", cat);
+		return "webapps/addCatalog";
+	}
+
+	@RequestMapping(value="/catalog/delete/{id}", method = RequestMethod.GET)
+	public String delete(@PathVariable Long id, Model model){
+		catalogService.delete(id);
+		return "redirect:/catalog";
 	}
 }

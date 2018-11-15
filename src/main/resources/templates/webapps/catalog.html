@@ -21,7 +21,7 @@
 
   <body>
 <div>
-<header th:insert="webapps/index :: navHeader">	</header>
+<header th:insert="webapps/index::navHeader">	</header>
 </div>
 
 <br/>
@@ -34,14 +34,14 @@
 			<thead>
 				<th>Catalog ID</th>
 				<th>Catalog Name</th>
-				<th>Catalog Description</th>
+				<th>Catalog Image</th>
 				<th>Actions</th>
 			</thead>
 			<tbody>
 				<tr th:each="catalog : ${catalogs}">
 					<td th:text="${catalog.id}"></td>
 					<td th:text="${catalog.catalogName}"></td>
-					<td th:text="${catalog.catalogDescription}"></td>
+					<td><img  th:src="@{'data:image/jpeg;base64,'+${catalog.catalogPic}}"/></td>
 					<td>
 						<a th:href="@{'/catalog/' + ${catalog.id}}">Edit</a>&nbsp;
 						<a th:href="@{'/catalog/delete/' + ${catalog.id}}">Delete</a>
@@ -50,19 +50,18 @@
 			</tbody>
 		</table>
      </div>
-  <div>
+  
  <span id="list" style=float:left th:each="catalog : ${catalogs}">
  			<img src="https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?cs=srgb&dl=beach-sand-summer-46710.jpg&fm=jpg" alt="online pic" width="100" height="100">
 			<p th:text="${catalog.id}"></p>
 			<p th:text="${catalog.catalogName}"></p>
-	 		<td th:text="${catalog.catalogDescription}"></td>
+			<!--<p th:text="${catalog.description}"></p>-->
 			<p>
 				<a th:href="@{'/catalog/' + ${catalog.id}}">Edit</a>&nbsp;
 				<a th:href="@{'/catalog/delete/' + ${catalog.id}}">Delete</a>
 			</p>
 			<input type="button" onclick="description()" value="Description">
 		</span>
-  </div>
   </th:block>
     <div>
 	<footer th:replace="webapps/index :: footerCopyRight"></footer>

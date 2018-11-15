@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import edu.mum.cs425.project.eshoppers.domain.User;
 
 
-@Service
+
 public interface UserService {
 
 	public List<User> findAll();

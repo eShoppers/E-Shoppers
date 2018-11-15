@@ -14,7 +14,7 @@
 <div>
     <header th:replace="webapps/index :: navHeader"></header>
 </div>
-<form class="form-horizontal" action="/catalog" method="post" th:object="${catalog}">
+<form class="form-horizontal" action="/addcatalog" method="post" enctype="multipart/form-data" th:object="${catalog}">
     <fieldset>
         <input type="hidden" name="id" th:value="${catalog.id}">
 
@@ -39,9 +39,9 @@
 
         <!-- File Button -->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="filebutton">CATALOG IMAGE</label>
+            <label class="col-md-4 control-label" for="image_upload">CATALOG IMAGE</label>
             <div class="col-md-4">
-                <input id="filebutton" name="filebutton" class="input-file" type="file" required="" th:field="${catalog.catalogPic}">
+                <input id="image_upload" name="image_upload" class="input-file" type="file" required="">
             </div>
         </div>
 

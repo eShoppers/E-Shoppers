@@ -14,7 +14,7 @@
 <div>
     <header th:replace="webapps/index :: navHeader"></header>
 </div>
-<form class="form-horizontal" action="/product" method="post" th:object="${product}">
+<form class="form-horizontal" action="/product" method="post" enctype="multipart/form-data" th:object="${product}">
     <fieldset>
 
         <h1 align="center">Add Product</h1>
@@ -67,9 +67,9 @@
 
         <!-- File Button -->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="filebutton">PRODUCT IMAGE</label>
+            <label class="col-md-4 control-label" for="image_upload">PRODUCT IMAGE</label>
             <div class="col-md-4">
-                <input id="filebutton" name="filebutton" class="input-file" type="file" required="" th:field="${product.productPic}">
+                <input id="image_upload" name="image_upload" class="input-file" type="file" required="">
             </div>
         </div>
 

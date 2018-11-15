@@ -1,15 +1,19 @@
 package edu.mum.cs425.project.eshoppers.serviceImpl;
 
 import edu.mum.cs425.project.eshoppers.domain.User;
+import edu.mum.cs425.project.eshoppers.repository.UserRepository;
 import edu.mum.cs425.project.eshoppers.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class UserServiceImpl implements UserService {
-
+    @Autowired
+    UserRepository userRepository;
     @Override
     public List<User> findAll() {
-        return null;
+        return (List<User>)userRepository.findAll();
     }
 
     @Override

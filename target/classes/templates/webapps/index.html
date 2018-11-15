@@ -1,20 +1,3 @@
-<!-- <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="UTF-8">
-<title>Index Page</title>
-</head>
-<body>
-<div style="text-align: center;"><h1 >Welcome</h1></div>
-<div style="text-align: center;"><img alt="eshopper image" src="../images/e-shopper.gif"></div>
-
-<div style="text-align: center;"><a th:href="@{/login}">Log In</a></div>
-<div style="text-align: center;"><img alt="eshopper image" src="../images/e-shoppers-1.jpg"></div>
-<div style="text-align: center;"><a th:href="@{/signup}">Sign Up</a></div>
-
-
-</body>
-</html> -->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
@@ -30,7 +13,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" th:href="@{/css/cataloglist.css}" />
     <!-- Custom styles for this template -->
     <link href="../css/heroic-features.css" rel="stylesheet">
 
@@ -47,31 +30,14 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        
-<!-- </div>
-<div class="form-group">
-    <label for="catalog">Catalog:</label>
-    <select  class="form-control" required="required" 
-       th:value="${catagory.name}" name="catagoryname" id="catagoryname">
-      <option disabled="disabled" selected="selected" > --Catagories--</option>
-      <option th:each="catagory : ${catagories}" th:value="${catagory.id}" 
-       th:text="${catagory.name}" >
-      </option>
-    </select>
-</div> --><!-- 
-  <div class="form-group">
-  <label for="catalog">Catalog:</label>
-    <select  class="form-control" th:value="${catagory.name}" name="catagoryname" id="catagoryname">
-	<option>--All--</option>
-	<option th:each="catalog : ${catalogs}" th:value="${catalog.id}" 
-       th:text="${catalog.catalogName}" >
-      </option>
-	</select>
-	</div> --><select>
+
+          <select id="search">
 	<option selected>--All--</option>
-	<option>Mobile</option>
-		<option>Tablets</option>
+              <option th:each="catalog : ${cata}" th:value="${catalog.id}"
+                      th:text="${catalog.catalogName}" ></option>
 	</select>
+
+
 	<input type="text" class="search" id="search" size="35" placeholder="Please enter Key words" >&nbsp;
 	<input type="button" value="Search" id="search">
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -85,7 +51,7 @@
               <a class="nav-link" href="/product">redae</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Catalog">Catalogs</a>
+              <a class="nav-link" href="/catalog">Catalogs</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contactus">Contacts</a>
@@ -107,92 +73,42 @@
         </div>
       </div>
     </nav>
-
+    <nav>
     <!-- Page Content -->
     <div class="container" id="container">
 
       <!-- Jumbotron Header -->
-      <header class="jumbotron my-4"><!-- 
-        <h1 class="display-3">Welcome To E-Shoppers!</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-        <a href="#" class="btn btn-primary btn-lg">Call to action!</a> -->
+      <header class="jumbotron my-4">
         <img class="card-img-top" src="../images/eshopper-Header.png" alt="homelogo" height="200">
-        
       </header>
 
-      <!-- Page Features -->
-      <div class="row text-center">
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="../images/mob1.jpg" alt="iphone">
-            <div class="card-body">
-              <h4 class="card-title">iPhone</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="../images/e-shoppers-1.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Motorola</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="../images/e-shopping-cart.png" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Samsung</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="../images/gpxl.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <!-- /.row -->
-
+      <div id="list" style=float:left th:each="catalog : ${cata}">
+ 			<img src="https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?cs=srgb&dl=beach-sand-summer-46710.jpg&fm=jpg" alt="online pic" width="100" height="100">
+			<p th:text="${catalog.id}"></p>
+			<p th:text="${catalog.catalogName}"></p>
+	 		<p th:text="${catalog.catalogDescription}"></p>
+			<p>
+				<a th:href="@{'/catalog/' + ${catalog.id}}">Edit</a>&nbsp;
+				<a th:href="@{'/catalog/delete/' + ${catalog.id}}">Delete</a>
+			</p>
+			<input type="button" onclick="description()" value="Description">
+		</div>
     </div>
     <!-- /.container -->
-
+    </nav>
+    <nav>
     <!-- Footer -->
-    <footer class="py-5 bg-dark" th:fragment="footerCopyRight">
+    <footer  id="footer" th:fragment="footerCopyRight">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; E-Shoppers 2018</p>
+        <p  class="m-0 text-center text-white">Copyright &copy; E-Shoppers 2018</p>
       </div>
-      <!-- /.container -->
+
     </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    </nav>
   </body>
 
 </html>

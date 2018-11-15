@@ -29,18 +29,19 @@
     <div class="container" id="container">
 		<h1>well come to catalog</h1><br/>
 		<a href="/addcatalog">Create a Catalog</a>
-		<a href="/catalog" id="linkBackHome" >Back to home</a><br/><br/>
+		<a href="/" id="linkBackHome" >Back to home</a><br/><br/>
 		<table class="table table-striped">
 			<thead>
 				<th>Catalog ID</th>
 				<th>Catalog Name</th>
+				<th>Catalog Description</th>
 				<th>Actions</th>
 			</thead>
 			<tbody>
 				<tr th:each="catalog : ${catalogs}">
 					<td th:text="${catalog.id}"></td>
 					<td th:text="${catalog.catalogName}"></td>
-					<td th:text="${catalog.description}"></td>
+					<td th:text="${catalog.catalogDescription}"></td>
 					<td>
 						<a th:href="@{'/catalog/' + ${catalog.id}}">Edit</a>&nbsp;
 						<a th:href="@{'/catalog/delete/' + ${catalog.id}}">Delete</a>
@@ -49,18 +50,19 @@
 			</tbody>
 		</table>
      </div>
-  
+  <div>
  <span id="list" style=float:left th:each="catalog : ${catalogs}">
  			<img src="https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?cs=srgb&dl=beach-sand-summer-46710.jpg&fm=jpg" alt="online pic" width="100" height="100">
 			<p th:text="${catalog.id}"></p>
 			<p th:text="${catalog.catalogName}"></p>
-			<p th:text="${catalog.description}"></p>
+	 		<td th:text="${catalog.catalogDescription}"></td>
 			<p>
 				<a th:href="@{'/catalog/' + ${catalog.id}}">Edit</a>&nbsp;
 				<a th:href="@{'/catalog/delete/' + ${catalog.id}}">Delete</a>
 			</p>
 			<input type="button" onclick="description()" value="Description">
 		</span>
+  </div>
   </th:block>
     <div>
 	<footer th:replace="webapps/index :: footerCopyRight"></footer>

@@ -48,7 +48,7 @@ public class CatalogController {
 		System.out.println("successfull" + catalog);
 		System.out.println("successfull" + catalog);
 //        update with correct url
-		return "redirect:/";
+		return "redirect:/Catalog";
 	}
 	
 	

@@ -1,3 +1,21 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Index Page</title>
+</head>
+<body>
+<div style="text-align: center;"><h1 >Welcome</h1></div>
+<div style="text-align: center;"><img alt="eshopper image" src="../images/e-shopper.gif"></div>
+
+<div style="text-align: center;"><a th:href="@{/login}">Log In</a></div>
+<div style="text-align: center;"><img alt="eshopper image" src="../images/e-shoppers-1.jpg"></div>
+<div style="text-align: center;"><a th:href="@{/signup}">Sign Up</a></div>
+
+
+</body>
+</html> -->
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
@@ -12,8 +30,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-	<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
 
     <!-- Custom styles for this template -->
     <link href="../css/heroic-features.css" rel="stylesheet">
@@ -51,14 +67,13 @@
        th:text="${catalog.catalogName}" >
       </option>
 	</select>
-	</div> -->
-	<select>
+	</div> --><select>
 	<option selected>--All--</option>
 	<option>Mobile</option>
 		<option>Tablets</option>
 	</select>
-	<input type="text" class="search" id="search" size="35" placeholder="Please enter Key words">
-	<input type="button" id="search" value="Search">
+	<input type="text" class="search" id="search" size="35" placeholder="Please enter Key words" >&nbsp;
+	<input type="button" value="Search" id="search">
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
@@ -66,7 +81,7 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
+           <li class="nav-item">
               <a class="nav-link" href="/product">redae</a>
             </li>
             <li class="nav-item">

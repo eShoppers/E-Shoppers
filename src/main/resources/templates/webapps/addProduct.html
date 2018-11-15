@@ -12,11 +12,10 @@
 
 <body style="font-size: 14px">
 <div>
-    <header th:replace="webapps/index :: navHeader"></header>
+    <header th:insert="webapps/index :: navHeader"></header>
 </div>
 <form class="form-horizontal" action="/product" method="post" enctype="multipart/form-data" th:object="${product}">
     <fieldset>
-
         <h1 align="center">Add Product</h1>
 
         <!-- Select Basic -->

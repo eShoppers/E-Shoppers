@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import edu.mum.cs425.project.eshoppers.domain.Catalog;
 import edu.mum.cs425.project.eshoppers.service.CatalogService;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class CatalogController {
@@ -20,10 +21,15 @@ public class CatalogController {
 	@Autowired
 	CatalogService catalogService;
 	
-	@GetMapping(value="/Catalog")
-	public String cataloglist() {
-		
-		return "webapps/Catalog";
+	//@GetMapping(value="/Catalog")
+	@RequestMapping(value="/catalog", method = RequestMethod.GET)
+	public ModelAndView cataloglist() {
+		List<Catalog> catalog = catalogService.findAll();
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("catalogs", catalog);
+		modelAndView.setViewName("webapps/catalog");
+		return modelAndView;
+
 	}
 
 	@RequestMapping(value = "/addcatalog", method = RequestMethod.GET)
@@ -56,5 +62,20 @@ public class CatalogController {
 			System.out.println("successfull" + catalog);
 //        update with correct url
 			return "redirect:/";
+	}
+
+	@RequestMapping(value="/catalog/{id}", method = RequestMethod.GET)
+	public String view(@PathVariable Long id, Model model){
+		System.out.println("catalog id " + id);
+		Catalog cat = catalogService.findOne(id);
+		System.out.println(cat);
+		model.addAttribute("catalog", cat);
+		return "webapps/addCatalog";
+	}
+
+	@RequestMapping(value="/catalog/delete/{id}", method = RequestMethod.GET)
+	public String delete(@PathVariable Long id, Model model){
+		catalogService.delete(id);
+		return "redirect:/catalog";
 	}
 }

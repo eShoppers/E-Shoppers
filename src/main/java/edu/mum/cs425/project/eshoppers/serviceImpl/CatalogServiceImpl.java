@@ -20,7 +20,7 @@ public class CatalogServiceImpl implements CatalogService {
 	
     @Override
     public Catalog findOne(Long id) {
-        return null;
+        return catalogRepository.getOne(id);
     }
 
     @Override

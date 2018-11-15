@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bbb38ff-3e6e-44e6-8fcc-ab3b0f7967d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/webapps/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/CatalogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/CatalogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/webapps/addCatalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/webapps/addCatalog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/webapps/addProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/webapps/addProduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/CatalogController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/ContactController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/ProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/ProfileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/cataloglist.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/cataloglist.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/webapps/Catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/webapps/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/webapps/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/webapps/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/CatalogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/CatalogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/webapps/Catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/webapps/Catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/webapps/addProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/webapps/addProduct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/webapps/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/webapps/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,32 +39,34 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="23" />
-          <entry key="java" value="44" />
+          <entry key="css" value="1" />
+          <entry key="html" value="29" />
+          <entry key="java" value="51" />
           <entry key="properties" value="5" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="23" />
-          <entry key="JAVA" value="44" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="29" />
+          <entry key="JAVA" value="51" />
           <entry key="Properties" value="5" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1017" />
-          <entry key="java" value="1024" />
+          <entry key="html" value="1311" />
+          <entry key="java" value="1258" />
           <entry key="properties" value="21" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1016" />
-          <entry key="JAVA" value="1024" />
+          <entry key="HTML" value="1310" />
+          <entry key="JAVA" value="1258" />
           <entry key="Properties" value="21" />
           <entry key="ThymeleafExpressions" value="1" />
           <entry key="XML" value="2" />
@@ -78,25 +81,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/CatalogController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="51" column="9" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="51" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="405">
+              <caret line="29" column="29" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/ProductController.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/products.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="93">
+              <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -104,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/addProduct.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="73" column="14" lean-forward="true" selection-start-line="72" selection-start-column="18" selection-end-line="73" selection-end-column="14" />
+            <state relative-caret-position="1031">
+              <caret line="72" column="14" lean-forward="true" selection-start-line="71" selection-start-column="18" selection-end-line="72" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -113,19 +110,43 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/addCatalog.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/catalog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="41" column="67" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="67" />
+            <state relative-caret-position="213">
+              <caret line="43" column="86" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/ProductController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="77" column="35" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
               <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#fieldset#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#2268#2274#0" expanded="true" />
-                <element signature="e#2274#2280#0" expanded="true" />
-                <element signature="e#2280#2286#0" expanded="true" />
-                <element signature="e#2286#2292#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/CatalogController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="79" column="5" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="79" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -144,6 +165,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>fieldset</find>
+      <find>Conta</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -165,16 +187,19 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/ProductServiceImplementation.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Cart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/CatalogService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/webapps/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Catalog.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Product.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/CatalogController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/webapps/addCatalog.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/webapps/addProduct.html" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/CatalogController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/webapps/porducts.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/webapps/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/webapps/products.html" />
         <option value="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/webapps/catalog.html" />
       </list>
     </option>
   </component>
@@ -192,8 +217,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="87" />
-    <option name="y" value="32" />
+    <option name="x" value="86" />
+    <option name="y" value="73" />
     <option name="width" value="1305" />
     <option name="height" value="815" />
   </component>
@@ -331,7 +356,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542243470036" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542257112403" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
@@ -374,18 +399,18 @@
       <updated>1542081227382</updated>
       <workItem from="1542081228700" duration="9185000" />
       <workItem from="1542126585278" duration="740000" />
-      <workItem from="1542127365217" duration="35290000" />
+      <workItem from="1542127365217" duration="45754000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45215000" />
+    <option name="totallyTimeSpent" value="55679000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="87" y="32" width="1305" height="815" extended-state="0" />
+    <frame x="86" y="73" width="1305" height="815" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20902613" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20902613" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -396,7 +421,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49852726" visible="true" weight="0.3208852" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49852726" visible="true" weight="0.3208852" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -491,33 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/CatalogService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1302">
-          <caret line="80" column="33" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -553,21 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-          <folding>
-            <element signature="e#1041#1042#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1118#1119#0" expanded="true" />
-            <element signature="e#1156#1157#0" expanded="true" />
-            <element signature="e#1658#1659#0" expanded="true" />
-            <element signature="e#1691#1692#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -582,23 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Catalog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1412#1413#0" expanded="true" />
-            <element signature="e#1477#1478#0" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1562#1563#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1635#1636#0" expanded="true" />
-            <element signature="e#1670#1671#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -606,9 +572,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CartServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Catalog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CatalogServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding>
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#707#708#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/CatalogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/addCatalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state relative-caret-position="615">
           <caret line="41" column="67" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="67" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -622,33 +620,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/cataloglist.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/domain/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/CatalogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="79" column="5" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="79" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="77" column="35" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/addProduct.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="73" column="14" lean-forward="true" selection-start-line="72" selection-start-column="18" selection-end-line="73" selection-end-column="14" />
+        <state relative-caret-position="1031">
+          <caret line="72" column="14" lean-forward="true" selection-start-line="71" selection-start-column="18" selection-end-line="72" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/CatalogController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webapps/catalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="51" column="9" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="51" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="213">
+          <caret line="43" column="86" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
         </state>
       </provider>
     </entry>

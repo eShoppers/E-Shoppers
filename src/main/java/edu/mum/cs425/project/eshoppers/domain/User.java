@@ -4,30 +4,32 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
 
 @Entity
 public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
-	@NotEmpty
-	private long memberId;
-	@NotEmpty
-	@Email
-	private String email;
-	@NotEmpty
-	@Size(min=5)
-	private String password;
-	private String Role;
 
-	public User(long memberId, String email, String password, String role) {
-		this.memberId = memberId;
+
+//    @Column(name = "email", unique = true, nullable = false)
+//    @Email(message = "*Please provide a valid Email")
+//    @NotEmpty(message = "*Please provide an email")
+
+    private String email;
+//    @Column(name = "password", nullable = false)
+//    @Length(min = 5, message = "*Your password must have at least 5 characters")
+//    @NotEmpty(message = "*Please provide your password")
+    private String password;
+	private String role;
+
+	public User() {
+	}
+
+	public User(String email, String password, String role) {
 		this.email = email;
 		this.password = password;
-		Role = role;
+		this.role = role;
 	}
 
 	public long getId() {
@@ -36,14 +38,6 @@ public class User {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public long getMemberId() {
-		return memberId;
-	}
-
-	public void setMemberId(long memberId) {
-		this.memberId = memberId;
 	}
 
 	public String getEmail() {
@@ -63,10 +57,10 @@ public class User {
 	}
 
 	public String getRole() {
-		return Role;
+		return role;
 	}
 
 	public void setRole(String role) {
-		Role = role;
+		this.role = role;
 	}
 }

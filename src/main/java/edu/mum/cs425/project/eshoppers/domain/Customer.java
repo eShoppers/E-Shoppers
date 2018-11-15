@@ -1,57 +1,66 @@
 package edu.mum.cs425.project.eshoppers.domain;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
 @Entity
- //@Table(name="Customers")
+@Table(name="customers")
+@SecondaryTable(name="User" ,pkJoinColumns = @PrimaryKeyJoinColumn(name = "id"))
 public class Customer {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(updatable = false, nullable = false)
 	private Long cid;
-	@Column (name="First_Name")
+//	@Column (name="First_Name")
 	@NotEmpty
 	private String firstName;
 	@Column (name="Last_Name")
 	@NotEmpty
 	private String lastName;
-	@NotEmpty
+//	@NotEmpty
 	private String gender;
 	@Column (name="Phone_Number")
 	@NotEmpty
 	private String phoneNumber;
 	@NotNull
     private String street;
-	@NotEmpty
+   @NotEmpty
 	private String city;
-	@NotEmpty
+	//@NotEmpty
 	private String state;
 	@NotNull
-	@Size(min=5, max=5)
+	//@Size(min=5, max=5)
 	private int zipcode;
-	@NotEmpty
+   @NotEmpty
 	private String country;
 	@NotNull
 	private long cardNumber;
-	@NotNull
+    @NotNull
 	private int ccv;
-	@NotNull()
-	@Future()
+//	@NotNull()
+	//@Future()
+   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private LocalDate cardExpirationDate;
 	@NotEmpty
 	@Size(min=5)
+   @Column(table = "User")
 	private String password;
-	@NotEmpty
+//	@NotEmpty
 	@Email
+    @Column(table = "User")
 	private String email;
+	@Column(table = "User")
+    private boolean Role;
      public Customer()
 	 {}
 
-	public Customer(String firstName,String lastName, String gender,String phoneNumber,String street, String city, String state, int zipcode, String country,long cardNumber, int ccv, LocalDate cardExpirationDate, String password, String email) {
+	public Customer(String firstName, String lastName, String gender, String phoneNumber, String street, String city, String state, int zipcode, String country, long cardNumber, int ccv, LocalDate cardExpirationDate, String password, String email, boolean role) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
@@ -66,6 +75,15 @@ public class Customer {
 		this.cardExpirationDate = cardExpirationDate;
 		this.password = password;
 		this.email = email;
+		Role = role;
+	}
+
+	public boolean isRole() {
+		return Role;
+	}
+
+	public void setRole(boolean role) {
+		Role = role;
 	}
 
 	public Long getCid() {
@@ -186,5 +204,26 @@ public class Customer {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer{" +
+				"cid=" + cid +
+				", firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", gender='" + gender + '\'' +
+				", phoneNumber='" + phoneNumber + '\'' +
+				", street='" + street + '\'' +
+				", city='" + city + '\'' +
+				", state='" + state + '\'' +
+				", zipcode=" + zipcode +
+				", country='" + country + '\'' +
+				", cardNumber=" + cardNumber +
+				", ccv=" + ccv +
+				", cardExpirationDate=" + cardExpirationDate +
+				", password='" + password + '\'' +
+				", email='" + email + '\'' +
+				'}';
 	}
 }

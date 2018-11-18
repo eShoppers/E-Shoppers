@@ -16,12 +16,12 @@ public class HomeController {
 	public String homepages() {
 		return "webapps/index";
 	}
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 //	@RequestMapping(value = "/login", method = RequestMethod.GET)
 //	public String login() {
 //		return "webapps/login";

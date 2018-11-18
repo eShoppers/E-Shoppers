@@ -1,9 +1,11 @@
 package edu.mum.cs425.project.eshoppers.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.persistence.*;
 
 @Entity
 public class User {
@@ -12,24 +14,22 @@ public class User {
 	private long id;
 
 
-//    @Column(name = "email", unique = true, nullable = false)
-//    @Email(message = "*Please provide a valid Email")
-//    @NotEmpty(message = "*Please provide an email")
-
-    private String email;
-//    @Column(name = "password", nullable = false)
-//    @Length(min = 5, message = "*Your password must have at least 5 characters")
-//    @NotEmpty(message = "*Please provide your password")
+	@Column(name = "email", unique = true, nullable = false)
+	@Email(message = "*Please provide a valid Email")
+	  private String email;
+	@Column(name = "password", nullable = false)
+	@Length(min = 5, message = "*Your password must have at least 5 characters")
+	//5@JsonIgnore
     private String password;
-	private String role;
+	private String Role;
 
 	public User() {
 	}
 
-	public User(String email, String password, String role) {
+	public User(String email,String password, String role) {
 		this.email = email;
 		this.password = password;
-		this.role = role;
+		Role = role;
 	}
 
 	public long getId() {
@@ -57,10 +57,10 @@ public class User {
 	}
 
 	public String getRole() {
-		return role;
+		return Role;
 	}
 
 	public void setRole(String role) {
-		this.role = role;
+		Role = role;
 	}
 }

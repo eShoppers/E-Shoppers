@@ -17,9 +17,5 @@ public interface UserService {
 	public User findOne(Long id);
 	public void delete(Long id);
 	Optional<User> findByEmail(String email);
-	//Optional<User> findByPasswordEqualsAndEmailEquals(String password,String email);
-	//Optional<User> findByPassword(String password);
-	User findByEmailContainsAndPassword(String email,String password);
-	User findUserByEmail(String email);
 	User findUserByEmailAndPassword(String email,String password);
 }

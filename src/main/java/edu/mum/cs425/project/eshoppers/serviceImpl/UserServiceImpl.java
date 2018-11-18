@@ -18,23 +18,10 @@ public class UserServiceImpl implements UserService {
         return userRepository.findByEmail(email);
     }
 
-    @Override
-    public User findByEmailContainsAndPassword(String email, String password) {
-        return userRepository.findByEmailContainsAndPassword(email,password);
-    }
-
-    @Override
-    public User findUserByEmail(String email) {
-        return null;
-    }
-
-    @Override
+      @Override
     public User findUserByEmailAndPassword(String email, String password) {
         return userRepository.findUserByEmailAndPassword(email,password);
     }
-
-
-
 
     @Override
     public List<User> findAll() {

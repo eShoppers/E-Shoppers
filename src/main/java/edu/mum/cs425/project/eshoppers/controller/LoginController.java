@@ -46,9 +46,7 @@ public class LoginController {
 
         ModelAndView modelAndView = new ModelAndView();
         System.out.println(user.getPassword());
-       // if(userService.findByEmail(user.getEmail()).isPresent() || userService.findByPassword(user.getPassword()).isPresent()){
-      //  if(userService.findByEmailContainsAndPassword(email,password)!=null){
-           if(userService.findUserByEmailAndPassword(email,password)!=null){
+          if(userService.findUserByEmailAndPassword(email,password)!=null){
             modelAndView.setViewName("/webapps/index");
             modelAndView.addObject("user", user);
             return modelAndView;
@@ -64,25 +62,6 @@ public class LoginController {
         }
         return modelAndView;
     }
-
-//    @RequestMapping(value= {"/index"}, method=RequestMethod.GET)
-//    public ModelAndView home() {
-//        ModelAndView model = new ModelAndView();
-//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//        User user = userService.findUserByEmail(auth.getName());
-//               System.out.println(user);
-//      //  model.addObject("userName", user.getFirstname() + " " + user.getLastname());
-//        model.setViewName("webapps/index");
-//        return model;
-//    }
-//
-//    @RequestMapping(value= {"/access_denied"}, method=RequestMethod.GET)
-//    public ModelAndView accessDenied() {
-//        ModelAndView model = new ModelAndView();
-//        model.setViewName("webapps/access_denied");
-//        return model;
-//    }
-
 
 
 }

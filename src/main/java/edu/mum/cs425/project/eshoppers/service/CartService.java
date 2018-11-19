@@ -6,10 +6,9 @@ import edu.mum.cs425.project.eshoppers.domain.Cart;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-@Service
 @Transactional
 public interface CartService {
-    public List<Product> findAll();
+    public List<Cart> findAll();
     public Cart save(Cart cart);
     public void delete(Long id);
 

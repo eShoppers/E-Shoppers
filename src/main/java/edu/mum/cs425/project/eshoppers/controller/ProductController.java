@@ -4,6 +4,7 @@ import edu.mum.cs425.project.eshoppers.domain.Catalog;
 import edu.mum.cs425.project.eshoppers.domain.Product;
 import edu.mum.cs425.project.eshoppers.service.CatalogService;
 import edu.mum.cs425.project.eshoppers.service.ProductService;
+import org.apache.xerces.impl.dv.util.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -31,8 +33,23 @@ public class ProductController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("products", products);
         modelAndView.setViewName("webapps/products");
-        return modelAndView;
 
+        List<String> productImages = new ArrayList<>();
+        try{
+            for(Product p: products){
+                byte[] encodeBase64 = Base64.encode(p.getProductPic()).getBytes();
+                String base64Encoded = new String(encodeBase64, "UTF-8");
+                productImages.add(base64Encoded);
+
+            }
+
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        modelAndView.addObject("productImages", productImages );
+
+        return modelAndView;
     }
 
     @RequestMapping(value = "/product", method = RequestMethod.GET)

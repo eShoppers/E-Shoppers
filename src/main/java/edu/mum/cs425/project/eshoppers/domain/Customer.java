@@ -6,9 +6,11 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
- //@Table(name="Customers")
+ //@Table(name="Customer")
 public class Customer {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -32,7 +34,7 @@ public class Customer {
 	private String state;
 	@NotNull
 	@Size(min=5, max=5)
-	private int zipcode;
+	private String zipcode;
 	@NotEmpty
 	private String country;
 	@NotNull
@@ -48,10 +50,13 @@ public class Customer {
 	@NotEmpty
 	@Email
 	private String email;
-     public Customer()
-	 {}
 
-	public Customer(String firstName,String lastName, String gender,String phoneNumber,String street, String city, String state, int zipcode, String country,long cardNumber, int ccv, LocalDate cardExpirationDate, String password, String email) {
+	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+	private List<Orders> orders = new ArrayList<>();
+
+	public Customer() {}
+
+	public Customer(String firstName,String lastName, String gender,String phoneNumber,String street, String city, String state, String zipcode, String country,long cardNumber, int ccv, LocalDate cardExpirationDate, String password, String email) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
@@ -132,11 +137,11 @@ public class Customer {
 		this.state = state;
 	}
 
-	public int getZipcode() {
+	public String getZipcode() {
 		return zipcode;
 	}
 
-	public void setZipcode(int zipcode) {
+	public void setZipcode(String zipcode) {
 		this.zipcode = zipcode;
 	}
 

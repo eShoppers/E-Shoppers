@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/masterlayout}">
 <head>
     <meta charset="UTF-8">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -11,9 +12,10 @@
 </head>
 
 <body style="font-size: 14px">
-<div>
-    <header th:replace="webapps/index :: navHeader"></header>
-</div>
+<!--<div>-->
+    <!--<header th:replace="webapps/index :: navHeader"></header>-->
+<!--</div>-->
+<th:block layout:fragment="content">
 <form class="form-horizontal" action="/addcatalog" method="post" enctype="multipart/form-data" th:object="${catalog}">
     <fieldset>
         <input type="hidden" name="id" th:value="${catalog.id}">
@@ -56,9 +58,10 @@
 
     </fieldset>
 </form>
-<div>
-    <footer th:replace="webapps/index :: footerCopyRight"></footer>
-</div>
+</th:block>
+<!--<div>-->
+    <!--<footer th:replace="webapps/index :: footerCopyRight"></footer>-->
+<!--</div>-->
     <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
     <!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
     <script src="vendor/jquery/jquery.min.js"></script>

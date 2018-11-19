@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/AddToCart.css}" />
     <script type="text/javascript" th:src="@{/Jquery/AddToCart.js}"></script>
     <title>Title</title>
+
 </head>
 <body>
 <header th:replace="webapps/index :: navHeader">	</header>
@@ -27,34 +28,59 @@
         <label class="product-line-price">Total</label>
     </div>
 
-    <div class="product">
-        <div class="product-image">
-            <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg">
-        </div>
-        <div class="product-details">
-            <div class="productName" th:text="${product.productName}"> </div>
-            <p class="product-description" th:text="${product.description}"> </p>
-        </div>
-        <div class="product-price" id="unitPrice"  th:text="${product.unitPrice}"></div>
-        <div class="product-quantity">
-            <script th:inline="javascript">
-                function f() {
 
-                    alert("fghjkl");
-                }
-            </script>
-            <input type="number" id="totalPrice"  name="totalPrice" value="2"  min="1"  >
-            <!--th:onchange="${'javascript:functionXXX()'}"-->
-    </div>
-        <div class="product-removal">
-            <button class="remove-product">
-                Remove
-            </button>
-        </div>
-        <div class="product-line-price" id="result"  th:with="result=${product.unitPrice * 8}" ><span th:text="${result}"></span></div>
-    </div>
+    <table class="table table-hover">
+         <tbody>
+        <tr class = "datarow" th:each="product, iterstat : ${products}">
 
-     <div class="totals">
+            <div class="product" >
+                <div th:text="${iterstat.count}"></div>
+                <div class="product-image">
+                    <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg">
+                </div>
+                <div class="product-details">
+                    <div class="productName" th:text="${product.productName}"> </div>
+                    <p class="product-description" th:text="${product.description}"> </p>
+                </div>
+                <div class="product-price" id="unitPrice" th:with="unit=${product.unitPrice}"  th:text="${product.unitPrice}"></div>
+                <div class="product-quantity">
+                    <script th:inline="javascript">
+                        function f(x) {
+                            alert(x);
+                            var Price = [[${product.unitPrice}]];
+                            var z= document.getElementById("totalPrice").valueOf().value;
+                            var message = [[${product.unitPrice}]];
+                            document.getElementById("result1").innerHTML=z*Price;
+                        }
+                    </script>
+
+                    <input type="number" id="totalPrice"  name="quantities" value="2"  min="1" onchange="f(iterstat.count)" >
+                    <!--th:onchange="${'javascript:functionXXX()'}"-->
+
+                </div>
+                <div class="product-removal">
+                    <button class="remove-product">
+                        Remove
+                    </button>
+                </div>
+                <!--<span th:text="${result}"></span>-->
+                <div class="product-line-price" th:id="'result' + ${iterstat.count}" ></div>
+            </div>
+
+
+
+
+
+
+
+
+
+        </tr>
+        </tbody>
+    </table>
+
+
+    <div class="totals">
         <div class="totals-item">
             <label>Subtotal</label>
             <div class="totals-value" id="cart-subtotal">71.97</div>
@@ -77,5 +103,6 @@
 
 </div>
 <footer th:replace="webapps/index :: footerCopyRight"></footer>
+
 </body>
 </html>

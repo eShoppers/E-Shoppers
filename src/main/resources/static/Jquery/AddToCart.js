@@ -75,14 +75,11 @@ function removeItem(removeButton)
         recalculateCart();
     });
 }
- function functionXXX()
+ function multiply()
 {
-
-    var z= document.getElementById("totalPrice").valueOf().value;
-
-   //   var k=document.product_unit_price.valueOf().value;
-    alert(z);
-    // var y= document.getElementById("totalPrice");
-      //document.getElementById("result").innerHTML=z*k;
-     alert(y);
+alert("fuck")
+    // var unitPrice = [[${product.unitPrice}]];
+    // var z= document.getElementById("totalPrice").valueOf().value;
+    // var message = [[${product.unitPrice}]];
+    // document.getElementById("result1").innerHTML=z*unitPrice;
 }

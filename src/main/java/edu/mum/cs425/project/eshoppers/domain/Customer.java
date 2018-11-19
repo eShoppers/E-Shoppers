@@ -56,11 +56,11 @@ public class Customer {
     @Column(table = "User")
 	private String email;
 	@Column(table = "User")
-    private boolean Role;
+    private String Role;
      public Customer()
 	 {}
 
-	public Customer(String firstName, String lastName, String gender, String phoneNumber, String street, String city, String state, int zipcode, String country, long cardNumber, int ccv, LocalDate cardExpirationDate, String password, String email, boolean role) {
+	public Customer(String firstName, String lastName, String gender, String phoneNumber, String street, String city, String state, int zipcode, String country, long cardNumber, int ccv, LocalDate cardExpirationDate, String password, String email, String role) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
@@ -75,14 +75,14 @@ public class Customer {
 		this.cardExpirationDate = cardExpirationDate;
 		this.password = password;
 		this.email = email;
-		Role = role;
+		this.Role = role;
 	}
 
-	public boolean isRole() {
+	public String isRole() {
 		return Role;
 	}
 
-	public void setRole(boolean role) {
+	public void setRole(String role) {
 		Role = role;
 	}
 

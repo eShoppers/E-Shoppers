@@ -25,51 +25,43 @@ public class LoginController {
     UserService userService;
     @Autowired
     CustomerService customerService;
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
     public ModelAndView getLoginform(Model model) {
         ModelAndView modelAndView = new ModelAndView();
                modelAndView.addObject("user", new User());
                modelAndView.setViewName("webapps/login");
-           // model.addAttribute("user", new User());
-               return modelAndView;
+                     return modelAndView;
     }
+
 
     //    // checking for login credentials
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String handlerLoginRequest(@Valid @ModelAttribute("user") User user, BindingResult result, @RequestParam String username, @RequestParam String password , Model model) {
-        boolean found=false;
-        System.out.println(username);
-        System.out.println(password);
-           if(result.hasErrors())
-           {
+    @RequestMapping(value ="/login" ,method=RequestMethod.POST)
+    public ModelAndView loginSuccess(@Valid @ModelAttribute("user") User user,BindingResult bindingResult,@RequestParam("email") String email,
+                                      @RequestParam("password") String password){
+        if(bindingResult.hasErrors()){
+                  System.out.println("errors");
+               return new ModelAndView("webapps/login");
 
-               model.addAttribute("errors", result.getAllErrors());
-               System.out.println(result.getAllErrors());
-                // return "webapps/login";
+        }
 
-           }
-             List<User> users= userService.findAll();
-             for(User u: users)
-             {
-                 if(u.getEmail().equals(username)&& u.getPassword().equals(password))
-                 {
-                       found=true;
-                     Customer customer;
-                     customer = customerService.findOne(u.getId());
-                       System.out.println(u.getId()+customer.getFirstName());
+        ModelAndView modelAndView = new ModelAndView();
+        System.out.println(user.getPassword());
+          if(userService.findUserByEmailAndPassword(email,password)!=null){
+            modelAndView.setViewName("/webapps/index");
+            modelAndView.addObject("user", user);
+            return modelAndView;
 
-                     break;
-                 }
-             }
-                if(found==true)
-            return "webapps/index";
-             else{
-                 model.addAttribute("user","can not be ");
-                 return "webapps/login";
-             }
+        }else{
+            bindingResult.rejectValue("email", "error.user",
+                    "invalid email");
+            bindingResult.rejectValue("password", "error.user",
+                    "invalid password");
+              modelAndView.setViewName("webapps/login");
+
+
+        }
+        return modelAndView;
     }
-
-
 
 
 }

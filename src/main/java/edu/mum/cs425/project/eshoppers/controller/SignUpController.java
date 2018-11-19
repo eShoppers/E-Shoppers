@@ -2,8 +2,10 @@ package edu.mum.cs425.project.eshoppers.controller;
 
 import edu.mum.cs425.project.eshoppers.domain.Customer;
 import edu.mum.cs425.project.eshoppers.domain.State;
+import edu.mum.cs425.project.eshoppers.domain.User;
 import edu.mum.cs425.project.eshoppers.service.CustomerService;
 import edu.mum.cs425.project.eshoppers.service.StateService;
+import edu.mum.cs425.project.eshoppers.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,35 +22,43 @@ public class SignUpController {
     CustomerService customerService;
     @Autowired
     StateService stateService;
-
+    @Autowired
+    UserService userService;
     @RequestMapping(value="/signup", method = RequestMethod.GET)
     public String  signup(Model model){
         model.addAttribute("customer", new Customer());
+        model.addAttribute("user",new User());
         List<State> states = stateService.findAll();
         model.addAttribute("states",states);
         return "webapps/signup";
     }
 
     @RequestMapping(value="/signup", method=RequestMethod.POST)
-    public String signup(@Valid @ModelAttribute(name="customer") Customer customer, BindingResult result,
-                         @RequestParam String State_option,@RequestParam String gridRadios  ,  Model model) {
-        System.out.println("first");
-        if (result.hasErrors()) {
-            System.out.println("errrorinitial");
-            model.addAttribute("errors", result.getAllErrors());
-            System.out.println(result.getAllErrors());
-            return "webapps/signup";
-
+    public ModelAndView signup(@Valid User user,BindingResult resultUser, @Valid Customer customer, BindingResult result,
+                               @RequestParam String State_option, @RequestParam String gridRadios,@RequestParam String role) {
+        if (userService.findByEmail(user.getEmail()).isPresent()) {
+            resultUser
+                    .rejectValue("email", "error.customer",
+                            "There is already a user registered with the email provided");
+            System.out.println("error");
         }
+            ModelAndView modelAndView = new ModelAndView();
+            if (resultUser.hasErrors() || result.hasErrors()) {
+                modelAndView.addObject("errorMessage","There is already a user registered with the email provided");
+                modelAndView.setViewName("/webapps/signup");
 
-        customer.setState(State_option);
-        System.out.println("out"+gridRadios);
-        customer.setGender(gridRadios);
-        customer= customerService.save(customer);
+            } else {
+                customer.setRole(role);
+                customer.setState(State_option);
+                customer.setGender(gridRadios);
+                customer=customerService.save(customer);
 
-        System.out.println("Userrrrrr"+customer);
-        return "redirect:/login";
-    }
+                modelAndView.addObject("successMessage", "User has been registered successfully");
+                modelAndView.addObject("customer", new Customer());
+                modelAndView.setViewName("/webapps/signup");
+            }
+            return modelAndView;
+        }
     @RequestMapping(value="/signup/{id}", method = RequestMethod.GET)
     public String view(@PathVariable Long id, Model model){
         model.addAttribute("customer", customerService.findOne(id));

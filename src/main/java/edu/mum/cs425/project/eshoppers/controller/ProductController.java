@@ -25,9 +25,18 @@ public class ProductController {
     @Autowired
     CatalogService catalogService;
 
-    @RequestMapping(value="/products", method = RequestMethod.GET)
-    public ModelAndView productList() {
-        List<Product> products = productService.findAll();
+//    @RequestMapping(value="/products", method = RequestMethod.GET)
+//    public ModelAndView productList() {
+//        List<Product> products = productService.findProductByCatalog()
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject("products", products);
+//        modelAndView.setViewName("webapps/products");
+//        return modelAndView;
+//
+//    }
+        @RequestMapping(value="/products/{catalogName}", method = RequestMethod.GET)
+    public ModelAndView productList(@PathVariable String catalogName) {
+            List<Product> products = productService.findProductByCatalog(catalogService.findCatalogByCatalogName(catalogName));
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("products", products);
         modelAndView.setViewName("webapps/products");

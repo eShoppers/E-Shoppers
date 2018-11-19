@@ -37,4 +37,9 @@ public class CatalogServiceImpl implements CatalogService {
     public void delete(Long id) {
         catalogRepository.deleteById(id);
     }
+
+    @Override
+    public Catalog findCatalogByCatalogName(String name) {
+        return catalogRepository.findCatalogByCatalogName(name);
+    }
 }

@@ -8,8 +8,9 @@ import org.springframework.stereotype.Service;
 
 
 public interface CatalogService {
-    public Catalog findOne(Long id);
-    public List<Catalog> findAll();
-    public Catalog save(Catalog catalog);
+     Catalog findOne(Long id);
+     List<Catalog> findAll();
+     Catalog save(Catalog catalog);
     void delete(Long id);
+     Catalog findCatalogByCatalogName(String name);
 }

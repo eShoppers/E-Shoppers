@@ -61,7 +61,8 @@
 				<a th:href="@{'/catalog/' + ${catalog.id}}">Edit</a>&nbsp;
 				<a th:href="@{'/catalog/delete/' + ${catalog.id}}">Delete</a>
 			</p>
-			<input type="button" onclick="description()" value="Description">
+		<!--	<input type="button" th:onclick="/products"  value="Description">-->
+	          <a th:href="@{'/products/'+${catalog.catalogName}}">Description</a>
 		</span>
   </th:block>
     <div>

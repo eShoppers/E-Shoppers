@@ -35,7 +35,7 @@ public class Order {
     private Double price;
 
     @OneToOne
-    @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,property="@id", scope = Product.class)
+   // @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,property="@id", scope = Product.class)
     private Product product;
 
     public Order(String orderId, LocalDate orderDate, Long quantity, Double price, Product product) {

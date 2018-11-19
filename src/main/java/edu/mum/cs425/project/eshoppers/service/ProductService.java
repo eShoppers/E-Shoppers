@@ -1,5 +1,6 @@
 package edu.mum.cs425.project.eshoppers.service;
 
+import edu.mum.cs425.project.eshoppers.domain.Catalog;
 import edu.mum.cs425.project.eshoppers.domain.Product;
 import org.springframework.stereotype.Service;
 
@@ -10,4 +11,5 @@ public interface ProductService {
     Product save(Product product);
     Product findOne(Long id);
     void delete(Long id);
+    List<Product> findProductByCatalog(Catalog catalog);
 }

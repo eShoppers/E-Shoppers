@@ -37,7 +37,7 @@ public class LoginController {
     //    // checking for login credentials
     @RequestMapping(value ="/login" ,method=RequestMethod.POST)
     public ModelAndView loginSuccess(@Valid @ModelAttribute("user") User user,BindingResult bindingResult,@RequestParam("email") String email,
-                                      @RequestParam("password") String password){
+                                      @RequestParam("password") String password,Model model){
         if(bindingResult.hasErrors()){
                   System.out.println("errors");
                return new ModelAndView("webapps/login");
@@ -47,7 +47,9 @@ public class LoginController {
         ModelAndView modelAndView = new ModelAndView();
         System.out.println(user.getPassword());
           if(userService.findUserByEmailAndPassword(email,password)!=null){
-            modelAndView.setViewName("/webapps/index");
+              Customer name= customerService.findCustomerByEmail(email);
+              modelAndView.setViewName("/webapps/index");
+              model.addAttribute("name" ,name.getFirstName());
             modelAndView.addObject("user", user);
             return modelAndView;
 

@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c33bc6df-163c-4be8-9d6f-b6a7afc24f65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/repository/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/mum/cs425/project/eshoppers/serviceImpl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/webapps/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/webapps/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/repository/CustomerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/mum/cs425/project/eshoppers/serviceImpl/CustomerServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -423,7 +423,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542603550715" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542603614216" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -465,7 +465,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542511339670</updated>
-      <workItem from="1542511349403" duration="42979000" />
+      <workItem from="1542511349403" duration="43094000" />
     </task>
     <task id="LOCAL-00001" summary="11/08/2018 validation">
       <created>1542576704749</created>
@@ -488,15 +488,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542593750711</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="11/18/2018 product update">
+      <created>1542603601872</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1542603601872</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42979000" />
+    <option name="totallyTimeSpent" value="43094000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />

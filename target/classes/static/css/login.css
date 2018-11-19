@@ -34,3 +34,8 @@ div.well{
     height:30px;
     background-image: url('../../static/images/e-shopper.gif');
 }
+.validation-message {
+    font-style: normal;
+    font-size: 10px;
+    color: #FF1C19;
+}

@@ -1,30 +1,32 @@
 package edu.mum.cs425.project.eshoppers.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.persistence.*;
 
 @Entity
 public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
-	@NotEmpty
-	private long memberId;
-	@NotEmpty
-	@Email
-	private String email;
-	@NotEmpty
-	@Size(min=5)
-	private String password;
+
+
+	@Column(name = "email", unique = true, nullable = false)
+	@Email(message = "*Please provide a valid Email")
+	  private String email;
+	@Column(name = "password", nullable = false)
+	@Length(min = 5, message = "*Your password must have at least 5 characters")
+	//5@JsonIgnore
+    private String password;
 	private String Role;
 
-	public User(long memberId, String email, String password, String role) {
-		this.memberId = memberId;
+	public User() {
+	}
+
+	public User(String email,String password, String role) {
 		this.email = email;
 		this.password = password;
 		Role = role;
@@ -36,14 +38,6 @@ public class User {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public long getMemberId() {
-		return memberId;
-	}
-
-	public void setMemberId(long memberId) {
-		this.memberId = memberId;
 	}
 
 	public String getEmail() {

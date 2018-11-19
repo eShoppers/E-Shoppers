@@ -14,9 +14,11 @@ import java.util.List;
 
 
 @Entity
+@SequenceGenerator(name="seq", initialValue=3245323, allocationSize=100)
 public class Catalog {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq")
 	private Long id;
 
 	@NotEmpty(message="Please Provide catalog ame")

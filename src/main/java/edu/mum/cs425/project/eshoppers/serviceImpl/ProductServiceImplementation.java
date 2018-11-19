@@ -1,5 +1,6 @@
 package edu.mum.cs425.project.eshoppers.serviceImpl;
 
+import edu.mum.cs425.project.eshoppers.domain.Catalog;
 import edu.mum.cs425.project.eshoppers.domain.Product;
 import edu.mum.cs425.project.eshoppers.repository.ProductRepository;
 import edu.mum.cs425.project.eshoppers.service.ProductService;
@@ -14,7 +15,8 @@ public class ProductServiceImplementation implements ProductService {
 
     @Autowired
     ProductRepository productRepository;
-
+    @Autowired
+    CatalogServiceImpl catalogService;
     @Override
     public List<Product> findAll() {
         return productRepository.findAll();
@@ -41,5 +43,10 @@ public class ProductServiceImplementation implements ProductService {
     @Override
     public void delete(Long id) {
         productRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Product> findProductByCatalog(Catalog catalog) {
+        return productRepository.findProductByCatalog(catalog);
     }
 }

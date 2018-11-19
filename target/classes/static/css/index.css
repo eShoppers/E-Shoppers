@@ -1,5 +1,14 @@
 
 #search{
-    border-radius: 40px;
+    border-radius: 20px;
 }
-
+#footer{
+    background-color: #0c5460;
+    height: 50px;
+    text-align: center;
+}
+#list{
+    padding: 20px;
+    border-radius: 10px;
+    border: 10px solid darkslategray;
+}

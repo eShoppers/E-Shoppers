@@ -42,6 +42,7 @@
 	<input type="button" value="Search" id="search">
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+         
             <li class="nav-item active">
               <a class="nav-link" href="/">Home
                 <span class="sr-only">(current)</span>
@@ -77,11 +78,9 @@
     <th:block layout:fragment="content">
     <div class="container" id="container">
 
-      <!-- Jumbotron Header -->
       <header class="jumbotron my-4">
         <img class="card-img-top" src="../images/eshopper-Header.png" alt="homelogo" height="200">
       </header>
-
 
 
       <div id="list" style=float:left th:each="catalog : ${cata}">

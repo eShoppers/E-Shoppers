@@ -11,9 +11,9 @@ import java.util.Optional;
 
 
 public interface CartService {
-     public Cart save(Cart cart);
+     Cart save(Cart cart);
     void delete(Long id);
-    public List<Cart> findAll();
+    List<Cart> findAll();
     List<Cart> findCartByCustomer_Cid(long id);
    Cart findCartById(Long id);
 }

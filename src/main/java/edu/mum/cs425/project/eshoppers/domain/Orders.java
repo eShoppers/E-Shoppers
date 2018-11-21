@@ -31,7 +31,7 @@ public class Orders {
 
     @Column(name = "quantity")
     @NotNull
-    private Long quantity;
+    private int quantity;
 
     @Column(name = "price")
     @NotNull
@@ -46,7 +46,7 @@ public class Orders {
 
     public Orders(){}
 
-    public Orders(@NotEmpty String orderId, @NotNull LocalDate orderDate, @NotNull Long quantity, @NotNull Double price) {
+    public Orders(@NotEmpty String orderId, @NotNull LocalDate orderDate, @NotNull int quantity, @NotNull Double price) {
         this.orderId = orderId;
         this.orderDate = orderDate;
         this.quantity = quantity;
@@ -93,11 +93,11 @@ public class Orders {
         this.orderDate = orderDate;
     }
 
-    public Long getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Long quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 

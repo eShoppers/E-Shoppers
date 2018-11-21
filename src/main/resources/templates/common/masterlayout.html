@@ -12,9 +12,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/masterlayout.css}">
 </head>
 <body>
-<!-- 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary"> -->
-<!--<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" th:fragment="navHeader">
     <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
     <div class="container">
         <a class="navbar-brand" href="/products">E-Shoppers</a>
@@ -22,32 +20,47 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <input type="text" class="search" id="search" placeholder="Please enter Key words" >
+        <select id="searchOption">
+            <option selected>All</option>
+            <option th:each="catalog : ${cata}" th:value="${catalog.id}"
+                    th:text="${catalog.catalogName}" ></option>
+        </select>
+
+
+        <input type="text" class="search" id="searchBox" size="35" placeholder="Please enter Key words" >&nbsp;
+        <input type="button" value="Search" id="searchButton">
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
+
                 <li class="nav-item active">
                     <a class="nav-link" href="/">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/product">redae</a>
+                    <a class="nav-link" href="/product">Product</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/cart">Services</a>
+                    <a class="nav-link" href="/catalog">Catalogs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/catalog">Contact</a>
+                    <a class="nav-link" href="/contactus">Contacts</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/login" data-target="#container" >Sign In</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/shoppingcart" data-target="#container" class="nav-link">
+                    <a href="/shoppingCart" data-target="#container" class="nav-link">
                     <span id="shopping-cart"><img alt="shoppingcart" src="../images/shoppingcart.jpg" height="30" width="30">
                         <span>0</span><!-- ${numItems} from shopping cart-->
                     </span>
                     </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile">Hi <!-- ${username} --></a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/cart">Checkout</a>
                 </li>
             </ul>
         </div>

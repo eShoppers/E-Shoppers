@@ -8,9 +8,11 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name="customers")
+@Table(name="customer")
 @SecondaryTable(name="User" ,pkJoinColumns = @PrimaryKeyJoinColumn(name = "id"))
 public class Customer {
 	@Id
@@ -57,6 +59,10 @@ public class Customer {
 	private String email;
 	@Column(table = "User")
     private String Role;
+
+	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+	private List<Orders> ordersList= new ArrayList<>();
+
      public Customer()
 	 {}
 

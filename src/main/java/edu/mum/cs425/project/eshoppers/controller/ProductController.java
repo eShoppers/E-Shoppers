@@ -14,7 +14,6 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,14 +35,36 @@ public class ProductController {
 //        return modelAndView;
 //
 //    }
-        @RequestMapping(value="/products/{catalogName}", method = RequestMethod.GET)
+
+    @RequestMapping(value="/products/{catalogName}", method = RequestMethod.GET)
     public ModelAndView productList(@PathVariable String catalogName) {
-            List<Product> products = productService.findProductByCatalog(catalogService.findCatalogByCatalogName(catalogName));
+        List<Product> products = productService.findProductByCatalog(catalogService.findCatalogByCatalogName(catalogName));
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("products", products);
         modelAndView.setViewName("webapps/products");
 
+        List<String> productImages = recreateImages(products);
+        modelAndView.addObject("productImages", productImages );
+
+        return modelAndView;
+    }
+
+    @RequestMapping(value="/products", method = RequestMethod.GET)
+    public ModelAndView productList() {
+        List<Product> products = productService.findAll();
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("products", products);
+        modelAndView.setViewName("webapps/products");
+
+        List<String> productImages = recreateImages(products);
+        modelAndView.addObject("productImages", productImages );
+
+        return modelAndView;
+    }
+
+    private List<String> recreateImages(List<Product> products){
         List<String> productImages = new ArrayList<>();
+
         try{
             for(Product p: products){
                 byte[] encodeBase64 = Base64.encode(p.getProductPic()).getBytes();
@@ -55,10 +76,7 @@ public class ProductController {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
-
-        modelAndView.addObject("productImages", productImages );
-
-        return modelAndView;
+        return productImages;
     }
 
     @RequestMapping(value = "/product", method = RequestMethod.GET)

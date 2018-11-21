@@ -11,5 +11,6 @@ public interface CartService {
     public List<Cart> findAll();
     public Cart save(Cart cart);
     public void delete(Long id);
+    List<Cart> findCartByCustomer_Cid(Long cid);
 
 }

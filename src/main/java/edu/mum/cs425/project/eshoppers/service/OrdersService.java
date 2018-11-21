@@ -9,4 +9,5 @@ public interface OrdersService {
     Orders save(Orders order);
     Orders findOne(Long id);
     void delete(Long id);
+    List<Orders> findOrdersByCustomer_Cid(Long cid);
 }

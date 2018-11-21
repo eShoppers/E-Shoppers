@@ -20,3 +20,8 @@ body {
 .jumbotron my-4{
 	background:#000 url("../images/eshopper-Header.png") 0 0 no-repeat;
 }
+
+#list{
+  margin: 10px 10px 10px 10px;
+
+}

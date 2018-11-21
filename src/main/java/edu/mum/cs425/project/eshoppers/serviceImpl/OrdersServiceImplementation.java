@@ -33,4 +33,9 @@ public class OrdersServiceImplementation implements OrdersService {
     public void delete(Long id) {
         orderRepository.deleteById(id);
     }
+
+    @Override
+    public List<Orders> findOrdersByCustomer_Cid(Long cid) {
+        return orderRepository.findOrdersByCustomer_Cid(cid);
+    }
 }

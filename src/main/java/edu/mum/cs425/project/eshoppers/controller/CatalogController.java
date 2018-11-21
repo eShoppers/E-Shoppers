@@ -31,23 +31,27 @@ public class CatalogController {
 		modelAndView.addObject("catalogs", catalog);
 		modelAndView.setViewName("webapps/catalog");
 
+		List<String> catalogImages = CatalogController.recreateImages(catalog);
+		modelAndView.addObject("catalogImages", catalogImages );
+
+		return modelAndView;
+
+	}
+
+	static List<String> recreateImages(List<Catalog> catalogs){
 		List<String> catalogImages = new ArrayList<>();
 		try{
-			for(Catalog c: catalog){
+			for(Catalog c: catalogs){
 				byte[] encodeBase64 = Base64.encode(c.getCatalogPic()).getBytes();
 				String base64Encoded = new String(encodeBase64, "UTF-8");
 				catalogImages.add(base64Encoded);
-
 			}
 
 		}catch (Exception e){
 			System.out.println(e.getMessage());
 		}
 
-		modelAndView.addObject("catalogImages", catalogImages );
-
-		return modelAndView;
-
+		return catalogImages;
 	}
 
 	@RequestMapping(value = "/addcatalog", method = RequestMethod.GET)

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -29,51 +30,30 @@ public class OrdersController {
     @Autowired
     ProductService productService;
 
-    @ModelAttribute("products")
-    public List<Product> getProducts() {
-        // Get cart using empId from DB
-        //List<Cart> cart = cartService.findAll();
-        List<Product> pros = productService.findAll();
-        return  pros;
+//    @ModelAttribute("products")
+//    public List<Product> getProducts() {
+//        // Get cart using empId from DB
+//        //List<Cart> cart = cartService.findAll();
+//        List<Product> pros = productService.findAll();
+//        return  pros;
+//    }
+
+//    @RequestMapping(value="/cart", method = RequestMethod.GET)
+//    public String cartContent() {
+//        return "webapps/cart";
+//
+//    }
+
+    @RequestMapping(value = "/order/history/{cid}", method = RequestMethod.GET)
+    public ModelAndView orderHistory(@PathVariable Long cid) {
+
+        List<Orders> orders = ordersService.findOrdersByCustomer_Cid(cid);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("orders", orders);
+        modelAndView.setViewName("webapps/orderHistory");
+
+        return modelAndView;
     }
 
-    @RequestMapping(value="/cart", method = RequestMethod.GET)
-    public String cartContent() {
-        return "webapps/cart";
 
-    }
-
-    @RequestMapping(value = "/place/order", method = RequestMethod.POST)
-    public String placeOrder(@ModelAttribute("products") List<Product> products,
-                             BindingResult result, Model model) {
-
-        if (result.hasErrors()) {
-            model.addAttribute("errors", result.getAllErrors());
-            System.out.println("error occured");
-            return "webapps/addCatalog";
-        }
-
-        System.out.println("List of products in cart");
-        System.out.println(products);
-        int orderid = 100;
-        for(Product product: products){
-            Date d= new Date();
-            Orders order = new Orders();
-            order.setProduct(product);
-            order.setOrderDate(LocalDate.now());
-            order.setQuantity(1L);
-            order.setPrice(200.00);
-            order.setOrderId("" +  d.getTime());
-            System.out.println("successfull" + order);
-
-            ordersService.save(order);
-
-        }
-
-
-        System.out.println("Order placed successfully");
-
-//        update with correct url
-        return "redirect:/";
-    }
 }

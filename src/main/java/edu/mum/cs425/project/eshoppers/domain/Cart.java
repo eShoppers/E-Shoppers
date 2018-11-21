@@ -23,22 +23,23 @@ public class Cart {
        private Long id;
 
        @OneToOne
+       @JoinColumn(name="cid")
 	   private Customer customer;
        //private long customerId;
 
        @NotNull
        private int quantity;
 
-		@OneToMany//(mappedBy = "cart", cascade = CascadeType.PERSIST)
-		@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,property="@id", scope = Product.class)
-        private List<Product> products=new ArrayList<Product>();
+		@OneToOne//(mappedBy = "cart", cascade = CascadeType.PERSIST)
+       // @JoinColumn(name="id")
+        private Product product;
 
         public Cart() {}
 
-    public Cart(Customer customer, @NotNull int quantity, List<Product> products) {
+    public Cart(Customer customer, @NotNull int quantity, Product product) {
         this.customer = customer;
         this.quantity = quantity;
-        this.products = products;
+        this.product = product;
     }
 
     public Long getId() {
@@ -65,11 +66,11 @@ public class Cart {
         this.quantity = quantity;
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }

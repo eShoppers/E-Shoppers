@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="O. Kalu">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-EmRcsPP774S9MOi4ywB+JXUWjYnBdyInMzG2XsC5siZEUpexqxOMJW358dCYEjPu" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/masterlayout.css}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" th:fragment="navHeader">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
+    <div class="container">
+        <a class="navbar-brand" href="/products">E-Shoppers</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <select id="searchOption">
+            <option selected>All</option>
+            <option th:each="catalog : ${cata}" th:value="${catalog.id}"
+                    th:text="${catalog.catalogName}" ></option>
+        </select>
+
+
+        <input type="text" class="search" id="searchBox" size="35" placeholder="Please enter Key words" >&nbsp;
+        <input type="button" value="Search" id="searchButton">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/product">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/catalog">Catalogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login" data-target="#container" >Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/shoppingCart" data-target="#container" class="nav-link">
+                    <span id="shopping-cart"><img alt="shoppingcart" src="../images/shoppingcart.jpg" height="30" width="30">
+                        <span>0</span><!-- ${numItems} from shopping cart-->
+                    </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile">Hi <!-- ${username} --></a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/cart">Checkout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="container">
+    <!--Thymeleaf placeholder for the page Content-->
+    <th:block layout:fragment="content"></th:block>
+    <!--End placeholder-->
+</div>
+
+<!--Thymeleaf placeholder for additional footer content-->
+<th:block layout:fragment="footer"></th:block>
+<!--End placeholder-->
+<footer class="footer py-5 bg-dark"> <!--class="py-5 bg-dark" th:fragment="footerCopyRight"> -->
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; E-Shoppers 2018</p>
+    </div>
+    <!-- /.container -->
+</footer>
+<!--<footer class="footer">-->
+<!--<div class="container">-->
+<!--<span class="text-muted">O. Kalu:::CS425-SWE</span><span style="float:right;" class="text-muted">&copy November 2018</span>-->
+<!--</div>-->
+<!--</footer>-->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

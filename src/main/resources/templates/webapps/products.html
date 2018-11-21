@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	  layout:decorate="~{common/masterlayout}">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 
   <head>
 
@@ -11,38 +11,38 @@
 
     <title>E-Shoppers</title>
 
-    <!-- Bootstrap core CSS -->
+
+	  <!-- Bootstrap core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" th:href="@{/css/cataloglist.css}" />
-    <!-- Custom styles for this template -->
+	<script src="../js/ajax.js"></script>
+	  <!-- Custom styles for this template -->
     <link href="../css/heroic-features.css" rel="stylesheet">
 
   </head>
 
   <body>
-<!--<div>-->
-<!--<header th:insert="webapps/index :: navHeader">	</header>-->
-<!--</div>-->
+  <div>
+	  <header th:insert="webapps/index :: navHeader">	</header>
+  </div>
 <th:block layout:fragment="content">
     <div class="container" id="container">
-		<h1>All Products</h1><br/>
-		<a href="/product">Create a Product</a>
+		<h1>well come to catalog</h1><br/>
+		<a href="/addcatalog">Create a Catalog</a>
 		<a href="/" id="linkBackHome" >Back to home</a><br/><br/>
 		<table class="table table-striped">
 			<thead>
-				<th>Product Name</th>
-				<th>Quantity </th>
-				<th>Unit Price</th>
-				<th>Description </th>
+				<th>Catalog ID</th>
+				<th>Product Unit</th>
+				<th>Catalog Image</th>
 				<th>Actions</th>
 			</thead>
 			<tbody>
-				<tr th:each="product, imageIndex : ${products}">
-					<td th:text="${product.productName}"></td>
-					<td th:text="${product.quantity}"></td>
+				<tr th:each="product : ${products}">
+					<td th:text="${product.id}"></td>
 					<td th:text="${product.unitPrice}"></td>
 					<td th:text="${product.description}"></td>
-					<td><img  th:width="200" th:height="200" th:src="@{'data:image/jpeg;base64,'+${productImages[imageIndex.index]}}"/></td>
+					<td><img  th:src="@{'data:image/jpeg;base64,'+${product.productPic}}"/></td>
 					<td>
 						<a th:href="@{'/product/' + ${product.id}}">Edit</a>&nbsp;
 						<a th:href="@{'/product/delete/' + ${product.id}}">Delete</a>
@@ -51,21 +51,16 @@
 			</tbody>
 		</table>
      </div>
-  
- <span id="list" style=float:left th:each="product : ${products}">
+    <span id="list" style=float:left th:each="product : ${products}">
  			<img src="https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?cs=srgb&dl=beach-sand-summer-46710.jpg&fm=jpg" alt="online pic" width="100" height="100">
 			<p th:text="${product.id}"></p>
-			<p th:text="${product.productName}"></p>
-			<!--<p th:text="${catalog.description}"></p>-->
-			<p>
-				<a th:href="@{'/product/' + ${product.id}}">Edit</a>&nbsp;
-				<a th:href="@{'/product/delete/' + ${product.id}}">Delete</a>
-			</p>
-			<input type="button" onclick="description()" value="Description">
+			<p th:text="${product.unitPrice}"></p>
+		<button type="submit" id="savebutton" name="savebutton" th:onclick="'javascript:makeAjaxCall();'">Details</button><br/>
+		<a th:href="@{'/AddToCart/'+${product.id}}">AddToCart</a>
 		</span>
   </th:block>
-<!--<div>-->
-	<!--<footer th:replace="webapps/index :: footerCopyRight"></footer>-->
-<!--</div>-->
+    <div>
+	<footer th:replace="webapps/index :: footerCopyRight"></footer>
+</div>
   </body>
 </html>

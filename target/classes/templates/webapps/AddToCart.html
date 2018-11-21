@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:h="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap core CSS -->
+   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture" rel="stylesheet">
+    <!-- Custom styles for this template -->
+   <link th:href="@{/css/heroic-features.css}" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/AddToCart.css}" />
+    <script type="text/javascript" th:src="@{/Jquery/AddToCart.js}"></script>
+    <title>Title</title>
+
+</head>
+<body>
+<header th:replace="webapps/index :: navHeader">	</header>
+
+
+<div class="shopping-cart">
+    <h3>Shopping Cart</h3>
+    <div class="column-labels">
+        <label class="product-image">Image</label>
+        <label class="product-details">Product</label>
+        <label class="product-price">Price</label>
+        <label class="product-quantity">Quantity</label>
+        <label class="product-removal">Remove</label>
+        <label class="product-line-price">Total</label>
+    </div>
+
+
+    <table class="table table-hover">
+         <tbody>
+        <tr class = "datarow" th:each="product, iterstat : ${products}">
+
+            <div class="product" >
+                <div th:text="${iterstat.count}"></div>
+                <div class="product-image">
+                    <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg">
+                </div>
+                <div class="product-details">
+                    <div class="productName" th:text="${product.productName}"> </div>
+                    <p type="hidden" class="product-description" th:text="${product.id}"> </p>
+                    <p class="product-description" th:text="${product.description}"> </p>
+                </div>
+                <div class="product-price" id="unitPrice" th:with="unit=${product.unitPrice}"  th:text="${product.unitPrice}"></div>
+                <div class="product-quantity">
+                    <script th:inline="javascript">
+                        function f() {
+                            var num=[[${product.id}]];
+                            var Price = [[${product.unitPrice}]];
+                            var z= document.getElementById("totalPrice").valueOf().value;
+                              alert(num);
+                            document.getElementById("result"+num).innerHTML=z*Price;
+                        }
+                    </script>
+
+                    <input type="number" id="totalPrice"  name="quantities" value="2" min="1" onchange="f()" />
+                    <!--th:onchange="${'javascript:functionXXX()'}"-->
+
+                </div>
+                <div class="product-removal">
+                    <button class="remove-product">
+                        Remove
+                    </button>
+                </div>
+                <!--<span th:text="${result}"></span>-->
+                <div class="product-line-price" th:id="'result' + ${product.id}" ></div>
+            </div>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="totals">
+        <div class="totals-item">
+            <label>Subtotal</label>
+            <div class="totals-value" id="cart-subtotal">71.97</div>
+        </div>
+        <div class="totals-item">
+            <label>Tax (5%)</label>
+            <div class="totals-value" id="cart-tax">3.60</div>
+        </div>
+        <div class="totals-item">
+            <label>Shipping</label>
+            <div class="totals-value" id="cart-shipping">15.00</div>
+        </div>
+        <div class="totals-item totals-item-total">
+            <label>Grand Total</label>
+            <div class="totals-value"  id="cart-total">90.57</div>
+        </div>
+    </div>
+
+    <button class="checkout">Checkout</button>
+
+</div>
+<footer th:replace="webapps/index :: footerCopyRight"></footer>
+
+</body>
+</html>

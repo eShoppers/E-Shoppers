@@ -14,5 +14,5 @@ public interface CustomerService {
 	public Customer findOne(Long id);
 
 	public void delete(Long id);
-
+	public Customer findCustomerByEmail(String email);
 }

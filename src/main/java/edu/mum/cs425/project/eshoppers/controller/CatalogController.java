@@ -1,11 +1,12 @@
 package edu.mum.cs425.project.eshoppers.controller;
 
-import java.util.ArrayList;
+import java.io.InputStream;
+import java.sql.Blob;
 import java.util.List;
 
 import javax.validation.Valid;
 
-import org.apache.xerces.impl.dv.util.Base64;
+import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,22 +31,6 @@ public class CatalogController {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("catalogs", catalog);
 		modelAndView.setViewName("webapps/catalog");
-
-		List<String> catalogImages = new ArrayList<>();
-		try{
-			for(Catalog c: catalog){
-				byte[] encodeBase64 = Base64.encode(c.getCatalogPic()).getBytes();
-				String base64Encoded = new String(encodeBase64, "UTF-8");
-				catalogImages.add(base64Encoded);
-
-			}
-
-		}catch (Exception e){
-			System.out.println(e.getMessage());
-		}
-
-		modelAndView.addObject("catalogImages", catalogImages );
-
 		return modelAndView;
 
 	}

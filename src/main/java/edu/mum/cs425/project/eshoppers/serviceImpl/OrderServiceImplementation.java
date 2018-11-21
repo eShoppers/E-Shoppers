@@ -1,31 +1,30 @@
 package edu.mum.cs425.project.eshoppers.serviceImpl;
 
-import edu.mum.cs425.project.eshoppers.domain.Orders;
-import edu.mum.cs425.project.eshoppers.repository.OrdersRepository;
-import edu.mum.cs425.project.eshoppers.service.OrdersService;
+import edu.mum.cs425.project.eshoppers.domain.Order;
+import edu.mum.cs425.project.eshoppers.domain.Product;
+import edu.mum.cs425.project.eshoppers.repository.OrderRepository;
+import edu.mum.cs425.project.eshoppers.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class OrdersServiceImplementation implements OrdersService {
+public class OrderServiceImplementation implements OrderService {
 
     @Autowired
-    OrdersRepository orderRepository;
+    OrderRepository orderRepository;
 
     @Override
-    public List<Orders> findAll() {
+    public List<Order> findAll() {
         return orderRepository.findAll();
     }
 
     @Override
-    public Orders save(Orders order) {
+    public Order save(Order order) {
         return orderRepository.save(order);
     }
 
     @Override
-    public Orders findOne(Long id) {
+    public Order findOne(Long id) {
         return orderRepository.getOne(id);
     }
 

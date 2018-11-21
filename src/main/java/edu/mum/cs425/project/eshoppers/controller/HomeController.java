@@ -24,7 +24,7 @@ public class HomeController {
 	@Autowired
 	CatalogService catalogService;
 
-	@RequestMapping(value = {"/", "/common/masterlayout"}, method = RequestMethod.GET)
+	@RequestMapping(value = {"/"}, method = RequestMethod.GET)
 	public ModelAndView homepage() {
 		List<Catalog> catalog = catalogService.findAll();
 

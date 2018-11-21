@@ -84,7 +84,6 @@
 
 
       <div id="list" style="float:left" th:each="catalog, imageIndex : ${cata}">
- 			<!--<img src="https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?cs=srgb&dl=beach-sand-summer-46710.jpg&fm=jpg" alt="online pic" width="100" height="100">-->
           <a th:href="@{'/products/'+${catalog.catalogName}}">
           <img  width="100" height="100" th:src="@{'data:image/jpeg;base64,'+${catalogImages[imageIndex.index]}}"/></td>
           </a>

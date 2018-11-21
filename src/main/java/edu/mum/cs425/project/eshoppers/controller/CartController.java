@@ -47,6 +47,7 @@ public class CartController {
 	@RequestMapping(value="/cart", method = RequestMethod.GET)
 	public ModelAndView showCart(){
 
+		//for test only
 		addProductAndCustomerToCart();
 
 		List<Cart> cartContent = cartService.findAll();
@@ -57,6 +58,7 @@ public class CartController {
 		return modelAndView;
 	}
 
+	//creates dummy cart
 	private void addProductAndCustomerToCart(){
 		Customer c = customerService.findOne(1L);
 		Product p = productService.findOne(3L);

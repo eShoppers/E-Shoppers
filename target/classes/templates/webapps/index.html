@@ -60,9 +60,10 @@
               <a class="nav-link" href="/login" data-target="#container" >Sign In</a>
              </li>
              <li class="nav-item">
-                <a href="/shoppingCart" data-target="#container" class="nav-link">
+                <a href="/AddToCart" data-target="#container" class="nav-link">
                     <span id="shopping-cart"><img alt="shoppingcart" src="../images/shoppingcart.jpg" height="30" width="30">
-                        <span>0</span><!-- ${numItems} from shopping cart-->
+                        <span th:text="${LengthCart}" >0</span>
+                       <!-- ${numItems} from shopping cart-->
                     </span>
                 </a>
                  </li>

@@ -15,13 +15,13 @@ public class Product {
 
     @Column(name = "quantity")
     @NotNull(message = "*Please provide product quantity")
-    private Long quantity;
+    private int quantity;
 
     //@Column(name = "unit_price")
     @NotNull(message = "*Please provide product unit price")
     private Double unitPrice;
 
-   // @Column(name = "description")
+    // @Column(name = "description")
     @NotEmpty(message = "*Please provide product description")
     private String description;
 
@@ -57,11 +57,11 @@ public class Product {
         this.productName = productName;
     }
 
-    public Long getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Long quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 

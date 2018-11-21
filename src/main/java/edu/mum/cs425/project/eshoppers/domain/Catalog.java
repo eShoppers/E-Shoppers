@@ -31,8 +31,8 @@ public class Catalog {
 	@Column(name="catalog_pic")
 	private byte[] catalogPic;
 
-    @OneToMany(mappedBy = "catalog", cascade = CascadeType.ALL)
-   // @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,property="@id", scope = Product.class)
+	@OneToMany(mappedBy = "catalog", cascade = CascadeType.ALL)
+	// @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,property="@id", scope = Product.class)
 	private List<Product> products=new ArrayList<Product>();
 
 	public Long getId() {

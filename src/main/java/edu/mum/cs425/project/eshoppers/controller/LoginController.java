@@ -1,8 +1,10 @@
 package edu.mum.cs425.project.eshoppers.controller;
 
 
+import edu.mum.cs425.project.eshoppers.domain.Cart;
 import edu.mum.cs425.project.eshoppers.domain.Customer;
 import edu.mum.cs425.project.eshoppers.domain.User;
+import edu.mum.cs425.project.eshoppers.service.CartService;
 import edu.mum.cs425.project.eshoppers.service.CustomerService;
 import edu.mum.cs425.project.eshoppers.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +23,13 @@ import java.util.List;
 
 @Controller
 public class LoginController {
-    @Autowired
+    public static Customer currentUser;
+       @Autowired
     UserService userService;
     @Autowired
     CustomerService customerService;
+    @Autowired
+    CartService cartService;
     @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
     public ModelAndView getLoginform(Model model) {
         ModelAndView modelAndView = new ModelAndView();
@@ -37,7 +42,7 @@ public class LoginController {
     //    // checking for login credentials
     @RequestMapping(value ="/login" ,method=RequestMethod.POST)
     public ModelAndView loginSuccess(@Valid @ModelAttribute("user") User user,BindingResult bindingResult,@RequestParam("email") String email,
-                                      @RequestParam("password") String password,Model model){
+                                      @RequestParam("password") String password){
         if(bindingResult.hasErrors()){
                   System.out.println("errors");
                return new ModelAndView("webapps/login");
@@ -47,10 +52,13 @@ public class LoginController {
         ModelAndView modelAndView = new ModelAndView();
         System.out.println(user.getPassword());
           if(userService.findUserByEmailAndPassword(email,password)!=null){
-              Customer name= customerService.findCustomerByEmail(email);
-              modelAndView.setViewName("/webapps/index");
-              model.addAttribute("name" ,name.getFirstName());
-            modelAndView.addObject("user", user);
+              Customer customer= customerService.findCustomerByEmail(email);
+                currentUser=customer;
+              List<Cart> carts = cartService.findCartByCustomer_Cid(currentUser.getCid());
+              modelAndView.addObject("LengthCart",carts.size());
+          modelAndView.setViewName("/webapps/index");
+        //      model.addAttribute("customer" ,customer.getFirstName());
+             modelAndView.addObject("customer", customer);
             return modelAndView;
 
         }else{

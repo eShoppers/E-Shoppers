@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: henoksolomon
+Build-Jdk: 10.0.2
+Implementation-Title: eshoppers
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: edu.mum.cs425.project.eshoppers
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/eshoppers
+Created-By: Maven Integration for Eclipse
+

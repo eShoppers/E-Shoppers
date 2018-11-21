@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:8085/login -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<link href="./E-SHOPPERS_files/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./E-SHOPPERS_files/login.css">
+<title>E-SHOPPERS</title>
+</head>
+<body>
+
+
+
+	
+	<title>E-SHOPPERS</title>
+
+
+<div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    	<link rel="stylesheet" type="text/css" href="./E-SHOPPERS_files/index.css">
+      <div class="container">
+        <a class="navbar-brand" href="http://localhost:8085/">E-Shoppers</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+          <select id="searchs">
+	<option selected="">--All--</option>
+              
+	</select>
+
+
+	<input type="text" class="search" id="search" size="35" placeholder="Please enter Key words">&nbsp;
+	<input type="button" value="Search" id="search">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="http://localhost:8085/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:8085/catalog">Catalogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:8085/contactus">Contacts</a>
+            </li>
+              <li class="nav-item">
+                  <a href="http://localhost:8085/shoppingCart" data-target="#container" class="nav-link">
+                    <span id="shopping-cart"><img alt="shoppingcart" src="./E-SHOPPERS_files/shoppingcart.jpg" height="30" width="30">
+                        <span>0</span><!-- ${numItems} from shopping cart-->
+                    </span>
+                  </a>
+              </li>
+              <!--<th:if test="${flag}">-->
+              <li class="nav-item">
+                  <a class="nav-link" href="http://localhost:8085/product">Product</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="http://localhost:8085/login" data-target="#container">Sign In</a>
+              </li>
+                <!--</th:if>-->
+              <!--<th:if test="${!flag}">-->
+              <li class="nav-item">
+                  <a class="nav-link" href="http://localhost:8085/" data-target="#container">Sign Out</a>
+              </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="http://localhost:8085/profile">Hi <!-- <span th:text="${signed-name}"></span> --></a>
+            </li>
+              <!--</th:if>-->
+          </ul>
+        </div>
+      </div>
+    </nav></div>
+ <div class="container">
+	<div class="row">
+		<div class="Absolute-Center is-Responsive">
+			<div id="logo-container"></div>
+			<div class="col-sm-12 col-md-10 col-md-offset-1">
+   <!--th:object="${user}"-->
+				<form action="http://localhost:8085/login" method="post">
+
+				
+                         <div class="form-group input-group">
+							 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i>
+							 <label class="validation-message">*Please provide a valid Email</label>
+
+						<input class="form-control" type="text" name="email" placeholder="email">
+     					</span></div>
+					<div class="form-group input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i>
+						<label class="validation-message">*Your password must have at least 5 characters</label>
+						<input class="form-control" type="password" name="password" placeholder="password"></span>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-def btn-block">Login</button>
+					</div>
+					<div class="form-group text-center">
+						<a href="http://localhost:8085/signup">Sign Up</a>
+						<a href="http://localhost:8085/signup/">Forgot Password</a>&nbsp;|&nbsp;<a href="http://localhost:8085/login#">Support</a>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="./E-SHOPPERS_files/jquery.min.js"></script>
+<script src="./E-SHOPPERS_files/bootstrap.bundle.min.js"></script>
+
+</body></html>

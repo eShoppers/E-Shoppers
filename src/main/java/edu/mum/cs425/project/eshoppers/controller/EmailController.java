@@ -13,7 +13,7 @@ import java.util.Properties;
 //@RestController
 public class EmailController {
 
-    // @RequestMapping(value = "/sendemail")
+   // @RequestMapping(value = "/sendemail")
     public static String sendEmail(String email) {
         try{
             sendmail(email);
@@ -42,21 +42,21 @@ public class EmailController {
         msg.setFrom(new InternetAddress("dawitaraya7@gmail.com", false));
 
         msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("da16ni19@gmail.com"));
-        // msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
+       // msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
         msg.setSubject("E-Shoppers Order Confirmation");
         msg.setContent("E-Shoppers email", "text/html");
         msg.setSentDate(new Date());
 
         MimeBodyPart messageBodyPart = new MimeBodyPart();
-        // messageBodyPart.setContent("Tutorials point email", "text/html");
+       // messageBodyPart.setContent("Tutorials point email", "text/html");
         messageBodyPart.setContent("Hi Daniel your order will arrive: " + LocalDate.now().plusDays(2), "text/html");
 
         Multipart multipart = new MimeMultipart();
         multipart.addBodyPart(messageBodyPart);
         //MimeBodyPart attachPart = new MimeBodyPart();
 
-        // attachPart.attachFile("/var/tmp/image19.png");
-        // multipart.addBodyPart(attachPart);
+       // attachPart.attachFile("/var/tmp/image19.png");
+       // multipart.addBodyPart(attachPart);
         msg.setContent(multipart);
         Transport.send(msg);
     }

@@ -50,7 +50,7 @@ public class ProductController {
     }
 
     @RequestMapping(value="/products", method = RequestMethod.GET)
-    public ModelAndView productList() {
+    public ModelAndView productListForCustomer() {
         List<Product> products = productService.findAll();
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("products", products);
@@ -62,7 +62,20 @@ public class ProductController {
         return modelAndView;
     }
 
-    private List<String> recreateImages(List<Product> products){
+    @RequestMapping(value="/edit/products", method = RequestMethod.GET)
+    public ModelAndView productListForAdmin() {
+        List<Product> products = productService.findAll();
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("products", products);
+        modelAndView.setViewName("webapps/editproducts");
+
+        List<String> productImages = recreateImages(products);
+        modelAndView.addObject("productImages", productImages );
+
+        return modelAndView;
+    }
+
+    public static List<String> recreateImages(List<Product> products){
         List<String> productImages = new ArrayList<>();
 
         try{

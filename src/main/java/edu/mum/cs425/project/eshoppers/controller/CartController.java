@@ -48,7 +48,7 @@ public class CartController {
 	public ModelAndView showCart(){
 
 		//for test only
-		addProductAndCustomerToCart();
+//		addProductAndCustomerToCart();
 
 		List<Cart> cartContent = cartService.findAll();
 		ModelAndView modelAndView = new ModelAndView();
@@ -59,17 +59,17 @@ public class CartController {
 	}
 
 	//creates dummy cart
-	private void addProductAndCustomerToCart(){
-		Customer c = customerService.findOne(1L);
-		Product p = productService.findOne(3L);
-		Product p1 = productService.findOne(17L);
-
-		Cart c1 = new Cart(c, 2, p);
-		cartService.save(c1);
-
-		Cart c2 = new Cart(c, 1, p1);
-		cartService.save(c2);
-	}
+//	private void addProductAndCustomerToCart(){
+//		Customer c = customerService.findOne(1L);
+//		Product p = productService.findOne(3L);
+//		Product p1 = productService.findOne(17L);
+//
+//		Cart c1 = new Cart(c, 2, p);
+//		cartService.save(c1);
+//
+//		Cart c2 = new Cart(c, 1, p1);
+//		cartService.save(c2);
+//	}
 
 	@RequestMapping(value = "/place/order/{cid}", method = RequestMethod.GET)
 	public String placeOrder(@PathVariable Long cid) {
@@ -89,7 +89,7 @@ public class CartController {
 			ordersService.save(order);
 
 			Product purchasedProduct = productService.findOne(item.getProduct().getId());
-			Long stockQuantity = purchasedProduct.getQuantity();
+			int stockQuantity = purchasedProduct.getQuantity();
 			purchasedProduct.setQuantity(stockQuantity - item.getQuantity());
 			productService.save(purchasedProduct);
 
@@ -98,7 +98,8 @@ public class CartController {
 		System.out.println("Order placed successfully");
 
 		String email = customerService.findOne(cid).getEmail();
-		EmailController.sendEmail(email);
+		String name = customerService.findOne(cid).getFirstName();
+		EmailController.sendEmail(email, name);
 
 		//delete order from cart
 		deleteOrderFromCart(carts);

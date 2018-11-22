@@ -1,0 +1,14 @@
+#list{
+    padding: 30px;
+    margin: 20px;
+    /*border-image: url("https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?cs=srgb&dl=beach-sand-summer-46710.jpg&fm=jpg") 30 round;*/
+    border-radius: 20px;
+}
+#search{
+    border-radius: 20px;
+}
+#footer{
+    background-color: #0c5460;
+    height: 50px;
+    text-align: center;
+}

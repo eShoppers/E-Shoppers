@@ -1,16 +1,19 @@
 package edu.mum.cs425.project.eshoppers.service;
 
+import edu.mum.cs425.project.eshoppers.domain.Customer;
 import org.springframework.stereotype.Service;
 import edu.mum.cs425.project.eshoppers.domain.Product;
 import edu.mum.cs425.project.eshoppers.domain.Cart;
-import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.List;
-@Transactional
-public interface CartService {
-    public List<Cart> findAll();
-    public Cart save(Cart cart);
-    public void delete(Long id);
-    List<Cart> findCartByCustomer_Cid(Long cid);
+import java.util.Optional;
 
+
+public interface CartService {
+     Cart save(Cart cart);
+    void delete(Long id);
+    List<Cart> findAll();
+    List<Cart> findCartByCustomer_Cid(long id);
+   Cart findCartById(Long id);
 }

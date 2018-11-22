@@ -3,7 +3,7 @@ package edu.mum.cs425.project.eshoppers.controller;
 import edu.mum.cs425.project.eshoppers.domain.Catalog;
 import edu.mum.cs425.project.eshoppers.domain.Product;
 import edu.mum.cs425.project.eshoppers.service.CatalogService;
-import org.apache.xerces.impl.dv.util.Base64;
+import edu.mum.cs425.project.eshoppers.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,16 +24,24 @@ public class HomeController {
 	@Autowired
 	CatalogService catalogService;
 
-	@RequestMapping(value = {"/"}, method = RequestMethod.GET)
-	public ModelAndView homepage() {
+	@Autowired
+	UserService userService;
+
+	//@RequestMapping(value = {"/"}, method = RequestMethod.GET)
+	//public ModelAndView homepage() {
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public ModelAndView homepage(Model model) {
 		List<Catalog> catalog = catalogService.findAll();
 
 		ModelAndView modelAndView = new ModelAndView();
+
+//		boolean flag = false;false
+		model.addAttribute("flag",true);
+//		modelAndView.addObject("flag",flag);
 		modelAndView.addObject("cata", catalog);
 		modelAndView.setViewName("webapps/index");
 
 		List<String> catalogImages = CatalogController.recreateImages(catalog);
-
 
 		modelAndView.addObject("catalogImages", catalogImages );
 		return modelAndView;

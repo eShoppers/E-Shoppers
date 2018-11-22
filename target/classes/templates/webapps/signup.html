@@ -8,71 +8,74 @@
 	<!-- Custom styles for this template -->
 	<link th:href="@{/css/heroic-features.css}" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" th:href="@{/css/signUp.css}" />
-	<title>Customer SignUp</title>
+	<title th:text="#{app.title}">Customer SignUp</title>
 </head>
 <body>
 <header th:replace="webapps/index :: navHeader">	</header>
-<div class="Abosulate-Center">
+<div class="Abosulate-Center"><br/><br/><br/>
 	<!--Show this info message only if registered successfully-->
 	<div class="alert alert-info" th:if="${successMessage}" th:utext="${successMessage}"></div>
-
-	<h2>Create account</h2>
+	<div style="text-align: center">
+		<b><h4>Select Language</h4>
+		<a href="/signup?lang=en">English&nbsp;&nbsp;</a> <a href="/signup?lang=fr">French&nbsp;&nbsp;</a><a href="/signup?lang=tg">Tigrigna</a></b>
+	</div>
+	<h2 th:text="#{app.title}">Create account</h2>
 	<form  th:action="@{/signup}"   method="post" th:object="${customer}">
 		<input type="hidden" th:value="${customer.cid}">
 
 		<div class="form-row col-md-6">
 			<div class="form-group col-md-6" data-th-if="${customer}">
-				<label for="inputFirstName">FirstName</label>
+				<label for="inputFirstName" th:text="#{app.fname}">FirstName</label>
 				<input type="text" class="form-control" id="inputFirstName" placeholder="first_name" th:field="${customer.firstName}">
 			</div>
 			<div class="form-group col-md-6">
-				<label for="inputPassword4">LastName</label>
+				<label for="inputPassword4" th:text="#{app.lname}">LastName</label>
 				<input type="text" class="form-control" id="inputLastName" placeholder="LastName" th:field="${customer.lastName}">
 			</div>
 		</div>
 		<div class="form-row col-md-6">
 			<div class="form-group col-md-6">
-				<label for="inputEmail">Email</label>
+				<label for="inputEmail" th:text="#{app.email}">Email</label>
 				<input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" th:field="${customer.email}" >
 				<label class="alert alert-danger" th:if="${errorMessage}" th:utext="${errorMessage}" ></label>
 
 			</div>
 			<div class="form-group col-md-6">
-				<label for="inputPassword4">Password</label>
+				<label for="inputPassword4" th:text="#{app.password}">Password</label>
 				<input type="password" class="form-control" id="inputPassword4" placeholder="Password" th:field="${customer.password}">
 				<label th:if="${#fields.hasErrors('password')}" th:errors="*{password}"  class="alert alert-danger"></label>
 
 			</div>
 		</div>
 		<div class="form-group col-md-6">
-			<label for="inputAddress">Address</label>
+			<label for="inputAddress" th:text="#{app.address}">Address</label>
 			<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" th:field="${customer.street}">
 		</div>
 		<div class="form-row col-md-6">
 			<div class="form-group col-md-6">
-				<label for="inputPhoneNumber">PhoneNumber</label>
+				<label for="inputPhoneNumber" th:text="#{app.pnumber}">PhoneNumber</label>
 				<input type="text" class="form-control" id="inputPhoneNumber" th:field="${customer.phoneNumber}">
 			</div>
 			<div class="form-group col-md-6">
-				<label for="inputCity">City</label>
+				<label for="inputCity" th:text="#{app.city}">City</label>
 				<input type="text" class="form-control" id="inputCity" th:field="${customer.city}">
 			</div>
 		</div>
 
 		<div class="form-row col-md-6">
 			<div class="form-group">
-				<label for="State_option">State:</label>
+				<label for="State_option" th:text="#{app.state}">State:</label>
 				<select name="State_option" id="state_option" class="form-control" required="required">
 					<option value="">State</option>
 					<option th:each="state : ${states}" th:value="${state.code}" th:text="${state.name}"></option>
 				</select>
 			</div>
 			<div class="form-group col-md-2">
-				<label for="inputZip">Zip</label>
+				<label for="inputZip" th:text="#{app.zip}">Zip</label>
 				<input type="text" class="form-control" id="inputZip" th:field="${customer.zipcode}">
 			</div>
 			<div class="form-group col-md-2">
-				<label for="inputZip">Country</label>
+				<label for="inputZip" th:text="#{app.country}">Country</label>
 				<input type="text" class="form-control" id="inputCounty" th:field="${customer.country}">
 			</div>
 			<div class="form-group col-md-2">
@@ -84,11 +87,10 @@
 		<div class="form-group">
 			<div class="form-check">
 				<label class="form-check-inline" >
-					<input class="form-check-input" type="radio" value="Male" name="gridRadios" id="maleRadio" th:checked="*{gender}"/> Male
+					<input class="form-check-input" type="radio" value="Male" name="gridRadios" id="maleRadio" th:checked="*{gender}" th:text="#{app.male}"/>
 				</label>
 				<label class="form-check-inline" >
-					<input class="form-check-input" value="Female" type="radio" name="gridRadios" id="femaleRadio" th:checked="*{gender}"/>
-					Female
+					<input class="form-check-input" value="Female" type="radio" name="gridRadios" id="femaleRadio" th:checked="*{gender}" th:text="#{app.female}"/ >
 				</label>
 
 
@@ -99,15 +101,15 @@
 		<div>
 			<div class="form-row col-md-6">
 				<div class="form-group col-md-6">
-					<label for="cc-name">Name on card</label>
+					<label for="cc-name" th:text="#{app.nameoncard}">Name on card</label>
 					<input type="text" class="form-control" id="cc-name" placeholder="" required >
-					<small class="text-muted">Full name as displayed on card</small>
+					<small class="text-muted" >Full name as displayed on card</small>
 					<div class="invalid-feedback">
 						Name on card is required
 					</div>
 				</div>
 				<div class="form-group col-md-6">
-					<label for="cc-number">Credit card number</label>
+					<label for="cc-number" th:text="#{app.cardnumber}">Credit card number</label>
 					<input type="text" class="form-control" id="cc-number" placeholder="" required th:field="${customer.cardNumber}">
 					<div class="invalid-feedback">
 						Credit card number is required
@@ -116,14 +118,14 @@
 			</div>
 			<div class="form-row col-md-6">
 				<div class="col-md-3 mb-3">
-					<label for="cc-expiration">Expiration</label>
+					<label for="cc-expiration" th:text="#{app.expiration}">Expiration</label>
 					<input type="date" class="form-control" id="cc-expiration" placeholder="" th:field="${customer.cardExpirationDate}" required>
 					<div class="invalid-feedback">
 						Expiration date required
 					</div>
 				</div>
 				<div class="form-group col-md-6">
-					<label for="cc-expiration">CVV</label>
+					<label for="cc-expiration" th:text="#{app.cvv}">CVV</label>
 					<input type="text" class="form-control" id="cc-cvv" placeholder="" required th:field="${customer.ccv}">
 					<div class="invalid-feedback">
 						Security code required
@@ -134,9 +136,9 @@
 
 
 
-		&nbsp;&nbsp;&nbsp;&nbsp;<button  type="submit" class="btn btn-primary" id="signUpId">Create your E-Shopper Account</button>
-		&nbsp;&nbsp;<button hidden  type="submit" class="btn btn-primary" id="edit">Edit My Account</button>
-		&nbsp;&nbsp;<button  type="submit" class="btn btn-primary" id="deleterId">Delete My Account</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;<button  type="submit" class="btn btn-primary" id="signUpId" th:text="#{app.createaccount}">Create your E-Shopper Account</button>
+		&nbsp;&nbsp;<button hidden  type="submit" class="btn btn-primary" id="edit" >Edit My Account</button>
+		&nbsp;&nbsp;<button  type="submit" class="btn btn-primary" id="deleterId" th:text="#{app.deleteaccount}">Delete My Account</button>
 	</form>
 
 </div><br/>

@@ -3,9 +3,9 @@ package edu.mum.cs425.project.eshoppers.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class User {
@@ -15,7 +15,7 @@ public class User {
 
 
 	@Column(name = "email", unique = true, nullable = false)
-	@Email(message = "*Please provide a valid Email")
+	@NotEmpty(message = "*Please provide a valid Email")
 	  private String email;
 	@Column(name = "password", nullable = false)
 	@Length(min = 5, message = "*Your password must have at least 5 characters")

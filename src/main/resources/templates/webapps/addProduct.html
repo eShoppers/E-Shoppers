@@ -13,89 +13,89 @@
 
 <body style="font-size: 14px">
 <!--<div>-->
-    <!--<header th:insert="webapps/index :: navHeader"></header>-->
+<!--<header th:insert="webapps/index :: navHeader"></header>-->
 <!--</div>-->
 <th:block layout:fragment="content">
-<form class="form-horizontal" action="/product" method="post" enctype="multipart/form-data" th:object="${product}">
-    <fieldset>
-        <!--&lt;!&ndash; Form Name &ndash;&gt;-->
-        <!--<legend align="center">Add Product</legend>-->
-        
+    <form class="form-horizontal" action="/product" method="post" enctype="multipart/form-data" th:object="${product}">
+        <fieldset>
+            <!--&lt;!&ndash; Form Name &ndash;&gt;-->
+            <!--<legend align="center">Add Product</legend>-->
 
-        <h1 align="center">Add Product</h1>
 
-        <!-- Select Basic -->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="product_category">PRODUCT CATEGORY</label>
-            <div class="col-md-4">
-                <select id="product_category" name="product_category" placeholder="Select Category" class="form-control" required="">
-                    <option label="Select Product Category" disabled selected></option>
-                    <option th:each="category: ${catalog}" th:label="${category.catalogName}" th:value="${category.id}"></option>
-                </select>
+            <h1 align="center">Add Product</h1>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="product_category">PRODUCT CATEGORY</label>
+                <div class="col-md-4">
+                    <select id="product_category" name="product_category" placeholder="Select Category" class="form-control" required="">
+                        <option label="Select Product Category" disabled selected></option>
+                        <option th:each="category: ${catalog}" th:label="${category.catalogName}" th:value="${category.id}"></option>
+                    </select>
+                </div>
             </div>
-        </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="product_name">PRODUCT NAME</label>
-            <div class="col-md-4">
-                <input id="product_name" name="product_name" placeholder="Product Name" class="form-control input-md" required="" type="text" th:field="${product.productName}">
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="product_name">PRODUCT NAME</label>
+                <div class="col-md-4">
+                    <input id="product_name" name="product_name" placeholder="Product Name" class="form-control input-md" required="" type="text" th:field="${product.productName}">
 
+                </div>
             </div>
-        </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="available_quantity">AVAILABLE QUANTITY</label>
-            <div class="col-md-4">
-                <input id="available_quantity" name="available_quantity" placeholder="Available Quantity" class="form-control input-md" required="" type="text" th:field="${product.quantity}">
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="available_quantity">AVAILABLE QUANTITY</label>
+                <div class="col-md-4">
+                    <input id="available_quantity" name="available_quantity" placeholder="Available Quantity" class="form-control input-md" required="" type="text" th:field="${product.quantity}">
 
+                </div>
             </div>
-        </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="product_unit_price">UNIT PRICE</label>
-            <div class="col-md-4">
-                <input id="product_unit_price" name="product_unit_price" placeholder="Unit Price" class="form-control input-md" required="" type="text" th:field="${product.unitPrice}">
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="product_unit_price">UNIT PRICE</label>
+                <div class="col-md-4">
+                    <input id="product_unit_price" name="product_unit_price" placeholder="Unit Price" class="form-control input-md" required="" type="text" th:field="${product.unitPrice}">
 
+                </div>
             </div>
-        </div>
 
-        <!-- Textarea -->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="product_description">PRODUCT DESCRIPTION</label>
-            <div class="col-md-4">
-                <textarea class="form-control" id="product_description" name="product_description" required="" th:field="${product.description}"></textarea>
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="product_description">PRODUCT DESCRIPTION</label>
+                <div class="col-md-4">
+                    <textarea class="form-control" id="product_description" name="product_description" required="" th:field="${product.description}"></textarea>
+                </div>
             </div>
-        </div>
 
-        <!-- File Button -->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="image_upload">PRODUCT IMAGE</label>
-            <div class="col-md-4">
-                <input id="image_upload" name="image_upload" class="input-file" type="file" required="">
+            <!-- File Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="image_upload">PRODUCT IMAGE</label>
+                <div class="col-md-4">
+                    <input id="image_upload" name="image_upload" class="input-file" type="file" required="">
+                </div>
             </div>
-        </div>
 
-        <!-- Button -->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="savebutton"></label>
-            <div class="col-md-4">
-                <button type="submit" id="savebutton" name="savebutton" class="btn btn-primary">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="reset" id="cancelbutton" name="cancelbutton" class="btn btn-secondary">Clear</button>
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="savebutton"></label>
+                <div class="col-md-4">
+                    <button type="submit" id="savebutton" name="savebutton" class="btn btn-primary">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="reset" id="cancelbutton" name="cancelbutton" class="btn btn-secondary">Clear</button>
+                </div>
             </div>
-        </div>
 
-    </fieldset>
-</form>
+        </fieldset>
+    </form>
 </th:block>
 <!--<div>-->
-    <!--<footer th:replace="webapps/index :: footerCopyRight"></footer>-->
+<!--<footer th:replace="webapps/index :: footerCopyRight"></footer>-->
 <!--</div>-->
-    <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
-    <!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+<!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

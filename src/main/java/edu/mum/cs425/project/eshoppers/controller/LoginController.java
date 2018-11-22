@@ -1,8 +1,11 @@
 package edu.mum.cs425.project.eshoppers.controller;
 
 
+import edu.mum.cs425.project.eshoppers.domain.Cart;
 import edu.mum.cs425.project.eshoppers.domain.Customer;
 import edu.mum.cs425.project.eshoppers.domain.User;
+import edu.mum.cs425.project.eshoppers.service.CartService;
+import edu.mum.cs425.project.eshoppers.service.CatalogService;
 import edu.mum.cs425.project.eshoppers.service.CustomerService;
 import edu.mum.cs425.project.eshoppers.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +24,20 @@ import java.util.List;
 
 @Controller
 public class LoginController {
+    public static Customer currentUser;
+
     @Autowired
     UserService userService;
+
     @Autowired
     CustomerService customerService;
+
+    @Autowired
+    CartService cartService;
+
+    @Autowired
+    CatalogService catalogService;
+
     @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
     public ModelAndView getLoginform(Model model) {
         ModelAndView modelAndView = new ModelAndView();
@@ -47,9 +60,17 @@ public class LoginController {
         ModelAndView modelAndView = new ModelAndView();
         System.out.println(user.getPassword());
           if(userService.findUserByEmailAndPassword(email,password)!=null){
-            modelAndView.setViewName("/webapps/index");
-            modelAndView.addObject("user", user);
-            return modelAndView;
+              Customer customer= customerService.findCustomerByEmail(email);
+              currentUser=customer;
+              List<Cart> carts = cartService.findCartByCustomer_Cid(currentUser.getCid());
+//              List<Catalog> catalog = catalogService.findAll();
+//
+//              modelAndView.addObject("cata", catalog);
+              modelAndView.addObject("LengthCart",carts.size());
+              modelAndView.addObject("customer", customer);
+              modelAndView.setViewName("/webapps/index");
+
+             return modelAndView;
 
         }else{
             bindingResult.rejectValue("email", "error.user",
@@ -61,6 +82,12 @@ public class LoginController {
 
         }
         return modelAndView;
+    }
+
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String  logout() {
+        currentUser = null;
+        return "redirect:/";
     }
 
 

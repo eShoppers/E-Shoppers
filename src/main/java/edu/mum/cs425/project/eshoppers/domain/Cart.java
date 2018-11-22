@@ -2,75 +2,88 @@ package edu.mum.cs425.project.eshoppers.domain;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 import java.util.List;
 import java.util.ArrayList;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="Cart")
-@ToString
 public class Cart {
-       
-       @Id
-	   @GeneratedValue(strategy = GenerationType.AUTO)
-       private Long id;
 
-       @OneToOne
-       @JoinColumn(name="cid")
-	   private Customer customer;
-       //private long customerId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	@OneToOne
+	private Customer customer;
+	private int quantity;
+    private double totalPrice;
+	@OneToOne
+//	@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,property="@id", scope = Product.class)
+	private Product product;
 
-       @NotNull
-       private int quantity;
+	public Cart() {
+	}
 
-		@OneToOne//(mappedBy = "cart", cascade = CascadeType.PERSIST)
-       // @JoinColumn(name="id")
-        private Product product;
+	public Cart(Customer customer, int quantity, double totalPrice, Product product) {
+		this.customer = customer;
+		this.quantity = quantity;
+		this.totalPrice = totalPrice;
+		this.product = product;
+	}
 
-        public Cart() {}
+	public Long getId() {
+		return id;
+	}
 
-    public Cart(Customer customer, @NotNull int quantity, Product product) {
-        this.customer = customer;
-        this.quantity = quantity;
-        this.product = product;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	public Customer getCustomer() {
+		return customer;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
 
-    public Customer getCustomer() {
-        return customer;
-    }
+	public int getQuantity() {
+		return quantity;
+	}
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 
-    public int getQuantity() {
-        return quantity;
-    }
+	public double getTotalPrice() {
+		return totalPrice;
+	}
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
 
-    public Product getProduct() {
-        return product;
-    }
+	public Product getProduct() {
+		return product;
+	}
 
-    public void setProduct(Product product) {
-        this.product = product;
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "id=" + id +
+                ", customer=" + customer +
+                ", quantity=" + quantity +
+                ", totalPrice=" + totalPrice +
+                ", product=" + product +
+                '}';
     }
 }

@@ -14,9 +14,9 @@ import java.util.Properties;
 public class EmailController {
 
    // @RequestMapping(value = "/sendemail")
-    public static String sendEmail(String email) {
+    public static String sendEmail(String email, String name) {
         try{
-            sendmail(email);
+            sendmail(email, name);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
@@ -26,7 +26,7 @@ public class EmailController {
     }
 
 
-    private static void sendmail(String email) throws MessagingException {
+    private static void sendmail(String email, String name) throws MessagingException {
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
@@ -41,7 +41,7 @@ public class EmailController {
         Message msg = new MimeMessage(session);
         msg.setFrom(new InternetAddress("dawitaraya7@gmail.com", false));
 
-        msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("da16ni19@gmail.com"));
+        msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
        // msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
         msg.setSubject("E-Shoppers Order Confirmation");
         msg.setContent("E-Shoppers email", "text/html");
@@ -49,7 +49,7 @@ public class EmailController {
 
         MimeBodyPart messageBodyPart = new MimeBodyPart();
        // messageBodyPart.setContent("Tutorials point email", "text/html");
-        messageBodyPart.setContent("Hi Daniel your order will arrive: " + LocalDate.now().plusDays(2), "text/html");
+        messageBodyPart.setContent("Hi " + name +" your order will arrive: " + LocalDate.now().plusDays(3), "text/html");
 
         Multipart multipart = new MimeMultipart();
         multipart.addBodyPart(messageBodyPart);

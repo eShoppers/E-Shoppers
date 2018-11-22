@@ -53,9 +53,9 @@
  	<span id="list" style="float:left" th:each="catalog, imageIndex : ${catalogs}">
  			<!--<img src="https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?cs=srgb&dl=beach-sand-summer-46710.jpg&fm=jpg" alt="online pic" width="100" height="100">-->
 			<img  width="200" height="200" th:src="@{'data:image/jpeg;base64,'+${catalogImages[imageIndex.index]}}"/>
-	 		<p th:text="'ID: ' + ${catalog.id}"></p>
+	 		<!--<p th:text="'ID: ' + ${catalog.id}"></p>-->
 			<p th:text="'Name: ' + ${catalog.catalogName}"></p>
-			<!--<p th:text="${catalog.description}"></p>-->
+			<p th:text="${catalog.catalogDescription}"></p>
 			<p>
 				<a th:href="@{'/catalog/' + ${catalog.id}}">Edit</a>&nbsp;
 				<a th:href="@{'/catalog/delete/' + ${catalog.id}}">Delete</a>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{common/masterlayout}">
 
   <head>
 
@@ -20,9 +22,9 @@
   </head>
 
   <body>
-<div>
-<header th:insert="webapps/index :: navHeader">	</header>
-</div>
+<!--<div>-->
+<!--<header th:insert="webapps/index :: navHeader">	</header>-->
+<!--</div>-->
 
 <br/>
 <th:block layout:fragment="content">
@@ -62,8 +64,8 @@
 			<input type="button" onclick="description()" value="Description">
 		</span>
   </th:block>
-    <div>
-	<footer th:replace="webapps/index :: footerCopyRight"></footer>
-</div>
+    <!--<div>-->
+	<!--<footer th:replace="webapps/index :: footerCopyRight"></footer>-->
+<!--</div>-->
   </body>
 </html>

@@ -23,5 +23,12 @@ body {
 
 #list{
   margin: 10px 10px 10px 10px;
+}
 
+#footer{
+  position: absolute;
+  width: 100%;
+  height: 60px;   /* Height of the footer */
+  background: #6cf;
+  bottom: -25%;
 }

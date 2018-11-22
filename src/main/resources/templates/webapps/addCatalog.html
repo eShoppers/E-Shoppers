@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{common/masterlayout}">
 <head>
     <meta charset="utf-8">
@@ -18,9 +19,7 @@
 </head>
 
 <body style="font-size: 14px">
-<!--<div>-->
-    <!--<header th:replace="webapps/index :: navHeader"></header>-->
-<!--</div>-->
+
 <th:block layout:fragment="content">
 <form class="form-horizontal" action="/addcatalog" method="post" enctype="multipart/form-data" th:object="${catalog}">
     <fieldset>
@@ -65,6 +64,7 @@
     </fieldset>
 </form>
 </th:block>
+<th:block layout:fragment="footer"></th:block>
 <!--<div>-->
     <!--<footer th:replace="webapps/index :: footerCopyRight"></footer>-->
 <!--</div>-->

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/masterlayout}">
 
   <head>
 
@@ -23,60 +25,60 @@
 
     <!-- Navigation -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" th:fragment="navHeader">
-    	<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
-      <div class="container">
-        <a class="navbar-brand" href="/products">E-Shoppers</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" th:fragment="navHeader">-->
+    	<!--<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />-->
+      <!--<div class="container">-->
+        <!--<a class="navbar-brand" href="/products">E-Shoppers</a>-->
+        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">-->
+          <!--<span class="navbar-toggler-icon"></span>-->
+        <!--</button>-->
 
-          <select id="searchOption">
-              <option selected>All</option>
-              <option th:each="catalog : ${cata}" th:value="${catalog.id}"
-                      th:text="${catalog.catalogName}" ></option>
-	</select>
+          <!--<select id="searchOption">-->
+              <!--<option selected>All</option>-->
+              <!--<option th:each="catalog : ${cata}" th:value="${catalog.id}"-->
+                      <!--th:text="${catalog.catalogName}" ></option>-->
+	<!--</select>-->
 
 
-	<input type="text" class="search" id="searchBox" size="35" placeholder="Please enter Key words" >&nbsp;
-	<input type="button" value="Search" id="searchButton">
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
+	<!--<input type="text" class="search" id="searchBox" size="35" placeholder="Please enter Key words" >&nbsp;-->
+	<!--<input type="button" value="Search" id="searchButton">-->
+        <!--<div class="collapse navbar-collapse" id="navbarResponsive">-->
+          <!--<ul class="navbar-nav ml-auto">-->
 
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-           <li class="nav-item">
-              <a class="nav-link" href="/product">Product</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/catalog">Catalogs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contactus">Contacts</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/login" data-target="#container" >Sign In</a>
-             </li>
-             <li class="nav-item">
-                <a href="/AddToCart" data-target="#container" class="nav-link">
-                    <span id="shopping-cart"><img alt="shoppingcart" src="../images/shoppingcart.jpg" height="30" width="30">
-                        <span>0</span><!-- ${numItems} from shopping cart-->
-                    </span>
-                </a>
-                 </li>
-                 <li class="nav-item">
-              <a class="nav-link" href="/profile">Hi <!-- ${username} --></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+            <!--<li class="nav-item active">-->
+              <!--<a class="nav-link" href="/">Home-->
+                <!--<span class="sr-only">(current)</span>-->
+              <!--</a>-->
+            <!--</li>-->
+           <!--<li class="nav-item">-->
+              <!--<a class="nav-link" href="/product">Product</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+              <!--<a class="nav-link" href="/catalog">Catalogs</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+              <!--<a class="nav-link" href="/contactus">Contacts</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+              <!--<a class="nav-link" href="/login" data-target="#container" >Sign In</a>-->
+             <!--</li>-->
+             <!--<li class="nav-item">-->
+                <!--<a href="/AddToCart" data-target="#container" class="nav-link">-->
+                    <!--<span id="shopping-cart"><img alt="shoppingcart" src="../images/shoppingcart.jpg" height="30" width="30">-->
+                        <!--<span th:text="${LengthCart}"></span>&lt;!&ndash; ${numItems} from shopping cart&ndash;&gt;-->
+                    <!--</span>-->
+                <!--</a>-->
+                 <!--</li>-->
+                 <!--<li class="nav-item">-->
+              <!--<a class="nav-link" href="/profile">Hi &lt;!&ndash; ${username} &ndash;&gt;</a>-->
+            <!--</li>-->
+          <!--</ul>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</nav>-->
     <!-- Page Content -->
     <th:block layout:fragment="content">
-    <div class="container" id="container">
+    <div class="container"  id="container">
 
       <header class="jumbotron my-4">
         <img class="card-img-top" src="../images/eshopper-Header.png" alt="homelogo" height="200">
@@ -100,25 +102,28 @@
     <!-- /.container -->
 
   </th:block>
+
+  <th:block layout:fragment="footer"></th:block>
     <!-- Footer -->
-    <footer  id="footer" th:fragment="footerCopyRight">
+    <!--<footer  id="footer" th:fragment="footerCopyRight">-->
 
-        <div class="container">
-            <p class="m-0 text-center text-white">
-               E-Shoppers &copy;2018
-                <span sec:authorize="isAuthenticated()" style="display: inline-block;">
-                    | Logged user: <span sec:authentication="name"></span> |
-                    Roles: <span sec:authentication="principal.authorities"></span> |
-                    <a th:href="@{/logout}">Sign Out</a>
-                </span>
-            </p>
-        </div>
+        <!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+            <!--&lt;!&ndash;<p class="m-0 text-center text-white">&ndash;&gt;-->
+               <!--&lt;!&ndash;E-Shoppers &copy;2018&ndash;&gt;-->
+                <!--&lt;!&ndash;<span sec:authorize="isAuthenticated()" style="display: inline-block;">&ndash;&gt;-->
+                    <!--&lt;!&ndash;| Logged user: <span sec:authentication="name"></span> |&ndash;&gt;-->
+                    <!--&lt;!&ndash;Roles: <span sec:authentication="principal.authorities"></span> |&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a th:href="@{/logout}">Sign Out</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-      <div class="container">
-        <p  class="m-0 text-center text-white">Copyright &copy; E-Shoppers 2018</p>
-      </div>
+      <!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+        <!--&lt;!&ndash;<p  class="m-0 text-center text-white">Copyright &copy; E-Shoppers 2018</p>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--<a th:href="@{'/edit/products'}">Edit Products</a>-->
 
-    </footer>
+    <!--</footer>-->
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

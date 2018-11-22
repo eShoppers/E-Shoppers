@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:h="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:h="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/masterlayout}">
 <head>
     <meta charset="UTF-8">
     <!-- Bootstrap core CSS -->
@@ -42,8 +44,9 @@
 
 </head>
 <body onload="fonLoad()" >
-<header th:replace="webapps/index :: navHeader">	</header>
 
+<!--<header th:replace="webapps/index :: navHeader">	</header>-->
+<th:block layout:fragment="content">
 
 <div class="shopping-cart">
     <h3>Shopping Cart</h3>
@@ -114,6 +117,9 @@
     <!--<button class="checkout">Checkout</button>-->
 
 </div>
-<footer th:replace="webapps/index :: footerCopyRight"></footer>
+
+<!--<footer th:replace="webapps/index :: footerCopyRight"></footer>-->
+</th:block>
+<th:block layout:fragment="footer"></th:block>
 </body>
 </html>

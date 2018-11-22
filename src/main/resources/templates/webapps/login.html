@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{common/masterlayout}">
 
 <head>
 <meta charset="UTF-8">
@@ -15,9 +17,11 @@
 	<title>E-SHOPPERS</title>
 </head>
 <body>
-<div>
-<header th:replace="webapps/index :: navHeader">	</header></div>
- <div class="container">
+<!--<div>-->
+<!--<header th:replace="webapps/index :: navHeader">	</header>-->
+<!--</div>-->
+<th:block layout:fragment="content">
+ <div class="container bg-light">
 	<div class="row">
 		<div class="Absolute-Center is-Responsive">
 			<div id="logo-container"></div>
@@ -50,6 +54,8 @@
 		</div>
 	</div>
 </div>
+</th:block>
+<th:block layout:fragment="footer"></th:block>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

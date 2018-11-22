@@ -50,22 +50,20 @@
                     <a class="nav-link" href="/login" data-target="#container" >Sign In</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/shoppingCart" data-target="#container" class="nav-link">
+                    <a href="/AddToCart" data-target="#container" class="nav-link">
                     <span id="shopping-cart"><img alt="shoppingcart" src="../images/shoppingcart.jpg" height="30" width="30">
-                        <span>0</span><!-- ${numItems} from shopping cart-->
+                        <span th:text="${LengthCart}"></span><!-- ${numItems} from shopping cart-->
                     </span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/profile">Hi <!-- ${username} --></a>
                 </li>
-                <li>
-                    <a class="nav-link" href="/cart">Checkout</a>
-                </li>
             </ul>
         </div>
     </div>
 </nav>
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <div class="container">
@@ -77,7 +75,7 @@
 <!--Thymeleaf placeholder for additional footer content-->
 <th:block layout:fragment="footer"></th:block>
 <!--End placeholder-->
-<footer class="footer py-5 bg-dark"> <!--class="py-5 bg-dark" th:fragment="footerCopyRight"> -->
+<footer class="footer py-1 bg-dark fixed-bottom"> <!--class="py-5 bg-dark" th:fragment="footerCopyRight"> -->
     <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; E-Shoppers 2018</p>
     </div>

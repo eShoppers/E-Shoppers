@@ -37,8 +37,9 @@ public class ProductController {
 //    }
 
     @RequestMapping(value="/products/{catalogName}", method = RequestMethod.GET)
-    public ModelAndView productList(@PathVariable String catalogName) {
-        List<Product> products = productService.findProductByCatalog(catalogService.findCatalogByCatalogName(catalogName));
+   public ModelAndView productList(@PathVariable String catalogName) {
+       List<Product> products = productService.findProductByCatalog(catalogService.findCatalogByCatalogName(catalogName));
+
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("products", products);
         modelAndView.setViewName("webapps/products");

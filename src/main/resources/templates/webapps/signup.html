@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:h="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:h="http://www.w3.org/1999/xhtml"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	 layout:decorate="~{common/masterlayout}">
 <head >
 	<meta charset="UTF-8">
 	<!-- Bootstrap core CSS -->
@@ -11,15 +13,18 @@
 	<title th:text="#{app.title}">Customer SignUp</title>
 </head>
 <body>
-<header th:replace="webapps/index :: navHeader">	</header>
+
+<!--<header th:replace="webapps/index :: navHeader"></header>-->
+<th:block layout:fragment="content">
+
 <div class="Abosulate-Center"><br/><br/><br/>
 	<!--Show this info message only if registered successfully-->
 	<div class="alert alert-info" th:if="${successMessage}" th:utext="${successMessage}"></div>
 	<div style="text-align: center">
-		<b><h4>Select Language</h4>
-		<a href="/signup?lang=en">English&nbsp;&nbsp;</a> <a href="/signup?lang=fr">French&nbsp;&nbsp;</a><a href="/signup?lang=tg">Tigrigna</a></b>
+		<b><h5>Select Language</h5>
+		<a href="/signup?lang=en">English&nbsp;&nbsp;</a> <a href="/signup?lang=fr">French&nbsp;&nbsp;</a><a href="/signup?lang=tg">Tigrigna</a>&nbsp;&nbsp;</a><a href="/signup?lang=igbo">Igbo</a></b>
 	</div>
-	<h2 th:text="#{app.title}">Create account</h2>
+	<h3 th:text="#{app.title}">Create account</h3>
 	<form  th:action="@{/signup}"   method="post" th:object="${customer}">
 		<input type="hidden" th:value="${customer.cid}">
 
@@ -142,9 +147,10 @@
 	</form>
 
 </div><br/>
-<footer th:replace="webapps/index :: footerCopyRight"></footer>
+<!--<footer th:replace="webapps/index :: footerCopyRight"></footer>-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</th:block>
 
 </body>
 </html>

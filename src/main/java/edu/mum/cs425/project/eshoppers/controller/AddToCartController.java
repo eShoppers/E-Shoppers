@@ -43,8 +43,10 @@ public class AddToCartController {
 
     @RequestMapping(value = "/AddToCart/{id}", method = RequestMethod.GET)
     public ModelAndView productListCart(@PathVariable Long id) {
-           Product product = productService.findOne(id);
-             Cart cart = new Cart();
+        System.out.println("customer id: " + id);
+
+        Product product = productService.findOne(id);
+        Cart cart = new Cart();
         cart.setCustomer(currentUser);
         cart.setQuantity(1);
         cart.setTotalPrice(product.getUnitPrice());
@@ -52,13 +54,20 @@ public class AddToCartController {
         cartService.save(cart);
         ModelAndView modelAndView = new ModelAndView();
         List<Cart> carts = cartService.findCartByCustomer_Cid(currentUser.getCid());
+        List<Product> products = new ArrayList<>();
+
         double subtotal=0.0;
         for(Cart c: carts)
         {
             subtotal += c.getTotalPrice();
+            products.add(c.getProduct());
         }
          modelAndView.addObject("subtotal",subtotal);
          modelAndView.addObject("carts", carts);
+
+        List<String> productImages = ProductController.recreateImages(products);
+        modelAndView.addObject("productImages", productImages );
+
         modelAndView.setViewName("webapps/AddToCart");
         return modelAndView;
     }
